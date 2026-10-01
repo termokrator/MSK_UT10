@@ -1,0 +1,262 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://ws.moskvorechie.ru:80/IST">
+	<objectType name="Incom_PM_6051_DOC_FOR_PORTAL">
+		<property name="DID" type="xs:string"/>
+	</objectType>
+	<objectType name="Incom_PM_6951_FOR_PORTAL">
+		<property name="KONTRAGENT_" type="xs:string"/>
+		<property name="BEGIN_DATE_" type="xs:date" nillable="true"/>
+		<property name="END_DATE_" type="xs:date" nillable="true"/>
+		<property name="DSTATE_" type="xs:string" nillable="true"/>
+		<property name="FILIALS" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Incom_PM_GET_RNS_STR_FOR_PORTAL">
+		<property name="DID_6951" type="xs:string"/>
+	</objectType>
+	<objectType name="Incom_PM_GET_ZP_PORTAL">
+		<property name="DID_ZP" type="xs:string"/>
+	</objectType>
+	<objectType name="Incom_RA_R_RN_LIN">
+		<property name="IDDOC" type="xs:string"/>
+	</objectType>
+	<objectType name="Out_PM_6051_DOC_FOR_PORTAL">
+		<property name="IDDOC" type="xs:string"/>
+		<property name="DCODE" type="xs:string"/>
+		<property name="IDKLIENT" type="xs:string"/>
+		<property name="KLIENT" type="xs:string"/>
+		<property name="DDATE1" type="xs:date"/>
+		<property name="FILIAL" type="xs:string"/>
+		<property name="VALUTA" type="xs:string"/>
+		<property name="DSTATE" type="xs:string"/>
+		<property name="DNUM1" type="xs:decimal"/>
+		<property name="PLAN_DATE_DOSTAVKA" type="xs:string"/>
+		<property name="VODITEL_NAME" type="xs:string"/>
+		<property name="MOBILE_VODITEL" type="xs:string"/>
+		<property name="SF" type="xs:string"/>
+		<property name="FLAGS" type="xs:integer"/>
+	</objectType>
+	<objectType name="Out_PM_6951_FOR_PORTAL">
+		<property name="DID" type="xs:string"/>
+		<property name="DCODE" type="xs:string"/>
+		<property name="DDATE1" type="xs:string"/>
+		<property name="FILIAL_NAME" type="xs:string"/>
+		<property name="DNOTE" type="xs:string"/>
+		<property name="VALUTA_NAME" type="xs:string"/>
+		<property name="DOGOVOR_NAME" type="xs:string"/>
+		<property name="SKLAD_NAME" type="xs:string"/>
+		<property name="OUR_FIRM" type="xs:string"/>
+		<property name="STATUS" type="xs:string"/>
+		<property name="STATUS_NUM" type="xs:integer"/>
+		<property name="REZERV_SUM" type="xs:decimal"/>
+		<property name="DATE_TIMESTAMP" type="xs:date"/>
+		<property name="FLAG_1" type="xs:integer" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Out_PM_GET_RNS_STR_FOR_PORTAL">
+		<property name="INV_NUM" type="xs:string"/>
+		<property name="DID" type="xs:string"/>
+		<property name="VALUTA" type="xs:string"/>
+		<property name="KOEF" type="xs:integer"/>
+		<property name="KOL_VO" type="xs:integer"/>
+		<property name="PRICE" type="xs:decimal"/>
+		<property name="TOVAR_PRIMECH" type="xs:string"/>
+		<property name="SUMMA" type="xs:decimal"/>
+		<property name="ARTICUL" type="xs:string"/>
+		<property name="TOVAR_NAME" type="xs:string"/>
+		<property name="BREND" type="xs:string"/>
+		<property name="ED_IZM" type="xs:string"/>
+		<property name="DCODE" type="xs:string" nillable="true"/>
+		<property name="DDATE1" type="xs:string" nillable="true"/>
+		<property name="STATUS" type="xs:string"/>
+		<property name="KOL_VO_MINUS" type="xs:integer"/>
+		<property name="PLAN_DATE" type="xs:string"/>
+		<property name="IDLIN" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="Out_PM_GET_ZP_PORTAL">
+		<property name="DOC_NUM" type="xs:string"/>
+		<property name="DOC_DATE" type="xs:date"/>
+		<property name="FILIAL" type="xs:string"/>
+		<property name="FILIAL_ID" type="xs:string"/>
+		<property name="KONTRAGENT" type="xs:string"/>
+		<property name="DOGOVOR" type="xs:string"/>
+		<property name="SKLAD" type="xs:string"/>
+		<property name="VALUTA" type="xs:string"/>
+		<property name="KONTRAGENT_ID" type="xs:string"/>
+		<property name="KOL_VO_STROK" type="xs:integer"/>
+		<property name="KOL_VO_POS" type="xs:integer"/>
+		<property name="FLAG_1" type="xs:integer" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Out_RA_R_RN_LIN">
+		<property name="EID" type="xs:string"/>
+		<property name="EID2" type="xs:string"/>
+		<property name="PROIZV" type="xs:string"/>
+		<property name="ARTICLE" type="xs:string"/>
+		<property name="TOVAR_NAME" type="xs:string"/>
+		<property name="TOVAR_KOL_V_ED_IZM" type="xs:integer"/>
+		<property name="KOEF_EDIZM" type="xs:integer"/>
+		<property name="TOVAR_KOL" type="xs:integer"/>
+		<property name="TOVAR_EDIZM" type="xs:string"/>
+		<property name="TOVAR_PRICE" type="xs:decimal"/>
+		<property name="TOVAR_SUMMA" type="xs:decimal"/>
+		<property name="TOVAR_PRIMECH" type="xs:string"/>
+	</objectType>
+	<objectType name="RS_PM_6051_DOC_FOR_PORTAL">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="Row" type="d3p1:Out_PM_6051_DOC_FOR_PORTAL" upperBound="-1"/>
+	</objectType>
+	<objectType name="RS_PM_6951_FOR_PORTAL">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="Row" type="d3p1:Out_PM_6951_FOR_PORTAL" upperBound="-1"/>
+	</objectType>
+	<objectType name="RS_PM_GET_RNS_STR_FOR_PORTAL">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="Row" type="d3p1:Out_PM_GET_RNS_STR_FOR_PORTAL" upperBound="-1"/>
+	</objectType>
+	<objectType name="RS_PM_GET_ZP_PORTAL">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="Row" type="d3p1:Out_PM_GET_ZP_PORTAL" upperBound="-1"/>
+	</objectType>
+	<objectType name="RS_RA_R_RN_LIN">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="Row" type="d3p1:Out_RA_R_RN_LIN" upperBound="-1"/>
+	</objectType>
+	<objectType name="RS_PM_6951_FOR_PORTAL_EX">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="Row" type="d3p1:Out_PM_6951_FOR_PORTAL_EX" upperBound="-1"/>
+	</objectType>
+	<objectType name="Out_PM_6951_FOR_PORTAL_EX">
+		<property name="DID_6951" type="xs:string"/>
+		<property name="DID_6051" type="xs:string"/>
+		<property name="DCODE_6951" type="xs:string"/>
+		<property name="DCODE_6051" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DDATE1_6951" type="xs:string"/>
+		<property name="DDATE1_6051" type="xs:string"/>
+		<property name="FILIAL_NAME" type="xs:string"/>
+		<property name="DNOTE" type="xs:string"/>
+		<property name="VALUTA_NAME" type="xs:string"/>
+		<property name="DOGOVOR_NAME" type="xs:string"/>
+		<property name="SKLAD_NAME" type="xs:string"/>
+		<property name="UR_LICO" type="xs:string"/>
+		<property name="OUR_FIRM" type="xs:string"/>
+		<property name="STATUS" type="xs:string"/>
+		<property name="STATUS_NUM" type="xs:integer"/>
+		<property name="REZERV_SUM" type="xs:decimal"/>
+		<property name="DATE_TIMESTAMP" type="xs:date"/>
+		<property name="FLAG_1" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="FLAG_2" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="FLAG_3" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="SF" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="INV_NUM" type="xs:string"/>
+		<property name="VALUTA" type="xs:string"/>
+		<property name="KOEF" type="xs:integer"/>
+		<property name="KOL_VO" type="xs:integer"/>
+		<property name="PRICE" type="xs:decimal"/>
+		<property name="TOVAR_PRIMECH" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SUMMA" type="xs:decimal"/>
+		<property name="ARTICUL_OUT" type="xs:string"/>
+		<property name="TOVAR_NAME" type="xs:string"/>
+		<property name="BREND" type="xs:string"/>
+		<property name="ED_IZM" type="xs:string"/>
+		<property name="KOL_VO_MINUS" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="PLAN_DATE" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="CAR_PHONE" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="IDLIN" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Incom_PM_6951_FOR_PORTAL_EX">
+		<property name="KONTRAGENT_" type="xs:string"/>
+		<property name="BEGIN_DATE_" type="xs:date" nillable="true"/>
+		<property name="END_DATE_" type="xs:date" nillable="true"/>
+		<property name="DSTATE_" type="xs:string" nillable="true"/>
+		<property name="FILIALS" type="xs:string" nillable="true"/>
+		<property name="ARTICUL" type="xs:string" nillable="true"/>
+		<property name="NOMER_DOC" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Incom_PM_PAYMENTS_FOR_PORTAL">
+		<property name="ID" type="xs:string"/>
+	</objectType>
+	<objectType name="Out_PM_PAYMENTS_FOR_PORTAL">
+		<property name="DATE_OPLATY" type="xs:string"/>
+		<property name="DATE_OPLATY_DATE" type="xs:date"/>
+		<property name="VALUTA" type="xs:string"/>
+		<property name="Summa" type="xs:decimal"/>
+		<property name="VALUTA_ID" type="xs:string"/>
+	</objectType>
+	<objectType name="RS_PM_PAYMENTS_FOR_PORTAL">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="Row" type="d3p1:Out_PM_PAYMENTS_FOR_PORTAL" upperBound="-1"/>
+	</objectType>
+	<objectType name="Incom_RA_MOVE_DOC_FOR_PORTAL">
+		<property name="IDDOC" type="xs:string"/>
+		<property name="DATETIME_DOSTAVKA" type="xs:dateTime" nillable="true"/>
+		<property name="DOSTAVKA_DNEY" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="DATETIME_PODBORA" type="xs:dateTime" nillable="true"/>
+		<property name="PRIMECH_PO_DOSTAVKE" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="IDUPAKOVKA_TYPE" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="IDSOTR_CLIENTA" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="IDMARSHRUT" type="xs:integer" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="RS_RA_MOVE_DOC_FOR_PORTAL">
+		<property name="RN_ID" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="RN_DCODE" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="RESULT" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="MSG" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Incom_AZ_A_DOC_6951_DEL_PORTAL">
+		<property name="DID" type="xs:string"/>
+		<property name="ID_SOTR" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="RS_AZ_A_DOC_6951_DEL_PORTAL">
+		<property name="RESULT" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="MSG" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Incom_RA_INS_UPDATE_STROKA_IZ_PORTALA">
+		<property name="IDDOC" type="xs:string"/>
+		<property name="IDTOVAR" type="xs:string" lowerBound="0"/>
+		<property name="INV" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="KOL" type="xs:integer" lowerBound="0"/>
+		<property name="PRIMECH" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="IS_LASTSTROKA" type="xs:string" lowerBound="0" nillable="true" default="0"/>
+		<property name="IDLIN" type="xs:string" lowerBound="0"/>
+	</objectType>
+	<objectType name="RS_RA_INS_UPDATE_STROKA_IZ_PORTALA">
+		<property name="NEWIDLIN" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="RESULT" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="MSG" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="REZERV" type="xs:integer" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="RS_PM_GET_RNS_STR_FOR_PORTAL_2021">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="Row" type="d3p1:Out_PM_GET_RNS_STR_FOR_PORTAL_2021" upperBound="-1"/>
+	</objectType>
+	<objectType name="Out_PM_GET_RNS_STR_FOR_PORTAL_2021">
+		<property name="INV_NUM" type="xs:string"/>
+		<property name="DID" type="xs:string"/>
+		<property name="VALUTA" type="xs:string"/>
+		<property name="KOEF" type="xs:integer"/>
+		<property name="KOL_VO" type="xs:integer"/>
+		<property name="PRICE" type="xs:decimal"/>
+		<property name="TOVAR_PRIMECH" type="xs:string"/>
+		<property name="SUMMA" type="xs:decimal"/>
+		<property name="ARTICUL" type="xs:string"/>
+		<property name="TOVAR_NAME" type="xs:string"/>
+		<property name="BREND" type="xs:string"/>
+		<property name="ED_IZM" type="xs:string"/>
+		<property name="DCODE" type="xs:string" nillable="true"/>
+		<property name="DDATE1" type="xs:string" nillable="true"/>
+		<property name="STATUS" type="xs:string"/>
+		<property name="KOL_VO_MINUS" type="xs:integer"/>
+		<property name="PLAN_DATE" type="xs:string"/>
+		<property name="IDLIN" type="xs:string" lowerBound="0"/>
+		<property name="FLAG_1" type="xs:integer" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="Incom_PM_GET_RNS_STR_FOR_PORTAL_2021">
+		<property name="DID_6951" type="xs:string"/>
+	</objectType>
+	<objectType name="RS_PM_GET_CHANGES_FOR_ORDER">
+		<property name="RESULT" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="MSG" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="HEADER_PM_GET_CHANGES_FOR_ORDER">
+		<property name="OrderID" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="ORDERLINES_PM_GET_CHANGES_FOR_ORDER">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/IST" name="ROW" type="d3p1:ORDERLINE_PM_GET_CHANGES_FOR_ORDER" upperBound="-1"/>
+	</objectType>
+	<objectType name="ORDERLINE_PM_GET_CHANGES_FOR_ORDER">
+		<property name="IDTOVAR" type="xs:string" lowerBound="0"/>
+		<property name="NAME" type="xs:string" nillable="true"/>
+		<property name="KOL" type="xs:integer" lowerBound="0"/>
+		<property name="UNRESERVE" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="IDLIN" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+</package>

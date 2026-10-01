@@ -1,0 +1,117 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://ws.moskvorechie.ru:80/ZAK">
+	<objectType name="OrderHeader">
+		<property name="OrderID" type="xs:string" nillable="true"/>
+		<property name="Comment" type="xs:string" nillable="true"/>
+		<property name="KlientID" type="xs:string" nillable="true"/>
+		<property name="FilialID" type="xs:string" nillable="true"/>
+		<property name="ValutaID" type="xs:string" nillable="true"/>
+		<property name="DogovorID" type="xs:string" nillable="true"/>
+		<property name="TipDost" type="xs:int" lowerBound="1" upperBound="1" nillable="true"/>
+		<property name="Name" type="xs:string" nillable="true"/>
+		<property name="Mail" type="xs:string" nillable="true"/>
+		<property name="Addres" type="xs:string" nillable="true"/>
+		<property name="AddresFakt" type="xs:string" nillable="true"/>
+		<property name="AddresFaktId" type="xs:string" nillable="true"/>
+		<property name="INN" type="xs:string" nillable="true"/>
+		<property name="KPP" type="xs:string" nillable="true"/>
+		<property name="FirmID" type="xs:string" nillable="true" default="" form="Element"/>
+		<property name="SkladID" type="xs:integer" nillable="true"/>
+		<property name="PaymentType" type="xs:integer" nillable="true"/>
+	</objectType>
+	<objectType name="OrderHeaders">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/ZAK" name="Lines" type="d3p1:OrderHeader" upperBound="-1"/>
+	</objectType>
+	<objectType name="OrderLine">
+		<property name="NumberInv" type="xs:string" nillable="true"/>
+		<property name="Brand" type="xs:string" nillable="true"/>
+		<property name="Articul" type="xs:string" nillable="true"/>
+		<property name="Name" type="xs:string" nillable="true"/>
+		<property name="Count" type="xs:string" nillable="true"/>
+		<property name="Price" type="xs:string" nillable="true"/>
+		<property name="Comment" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="OrderLines">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/ZAK" name="Lines" type="d3p1:OrderLine" upperBound="-1"/>
+	</objectType>
+	<objectType name="OutForPortal">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/ZAK" name="OutForPortalLines" type="d3p1:OutLine" upperBound="-1"/>
+	</objectType>
+	<objectType name="OutLine">
+		<property name="OrderNumber" type="xs:string"/>
+		<property name="Status" type="xs:string"/>
+	</objectType>
+	<objectType name="OrderLine_2017">
+		<property name="NumberInv" type="xs:string" nillable="true"/>
+		<property name="Brand" type="xs:string" nillable="true"/>
+		<property name="Articul" type="xs:string" nillable="true"/>
+		<property name="Name" type="xs:string" nillable="true"/>
+		<property name="Count" type="xs:string" nillable="true"/>
+		<property name="Price" type="xs:string" nillable="true"/>
+		<property name="Comment" type="xs:string" nillable="true"/>
+		<property name="Price_Zak" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="OrderLines_2017">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/ZAK" name="Lines" type="d3p1:OrderLine_2017" upperBound="-1"/>
+	</objectType>
+	<objectType name="OrderLine_2019">
+		<property name="NumberInv" type="xs:string" nillable="true"/>
+		<property name="Brand" type="xs:string" nillable="true"/>
+		<property name="Articul" type="xs:string" nillable="true"/>
+		<property name="Name" type="xs:string" nillable="true"/>
+		<property name="Count" type="xs:string" nillable="true"/>
+		<property name="Price" type="xs:string" nillable="true"/>
+		<property name="Comment" type="xs:string" nillable="true"/>
+		<property name="Price_Zak" type="xs:string" nillable="true"/>
+		<property name="PROIZV_SUPPLIER" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="OrderLines_2019">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/ZAK" name="Lines" type="d3p1:OrderLine_2019" upperBound="-1"/>
+	</objectType>
+	<objectType name="OrderHeader_2019">
+		<property name="OrderID" type="xs:string" nillable="true"/>
+		<property name="Comment" type="xs:string" nillable="true"/>
+		<property name="KlientID" type="xs:string" nillable="true"/>
+		<property name="FilialID" type="xs:string" nillable="true"/>
+		<property name="ValutaID" type="xs:string" nillable="true"/>
+		<property name="DogovorID" type="xs:string" nillable="true"/>
+		<property name="TipDost" type="xs:int" lowerBound="1" upperBound="1" nillable="true"/>
+		<property name="Name" type="xs:string" nillable="true"/>
+		<property name="Mail" type="xs:string" nillable="true"/>
+		<property name="Addres" type="xs:string" nillable="true"/>
+		<property name="AddresFakt" type="xs:string" nillable="true"/>
+		<property name="AddresFaktId" type="xs:string" nillable="true"/>
+		<property name="INN" type="xs:string" nillable="true"/>
+		<property name="KPP" type="xs:string" nillable="true"/>
+		<property name="FirmID" type="xs:string" nillable="true" default="" form="Element"/>
+		<property name="SkladID" type="xs:integer" nillable="true"/>
+		<property name="PaymentType" type="xs:integer" nillable="true"/>
+		<property name="Dostavka" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="OrderHeaders_2019">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/ZAK" name="Lines" type="d3p1:OrderHeader_2019" upperBound="-1"/>
+	</objectType>
+	<objectType name="OrderHeader_2020">
+		<property name="OrderID" type="xs:string" nillable="true"/>
+		<property name="Comment" type="xs:string" nillable="true"/>
+		<property name="KlientID" type="xs:string" nillable="true"/>
+		<property name="FilialID" type="xs:string" nillable="true"/>
+		<property name="ValutaID" type="xs:string" nillable="true"/>
+		<property name="DogovorID" type="xs:string" nillable="true"/>
+		<property name="TipDost" type="xs:int" lowerBound="1" upperBound="1" nillable="true"/>
+		<property name="Name" type="xs:string" nillable="true"/>
+		<property name="Mail" type="xs:string" nillable="true"/>
+		<property name="Addres" type="xs:string" nillable="true"/>
+		<property name="AddresFakt" type="xs:string" nillable="true"/>
+		<property name="AddresFaktId" type="xs:string" nillable="true"/>
+		<property name="INN" type="xs:string" nillable="true"/>
+		<property name="KPP" type="xs:string" nillable="true"/>
+		<property name="FirmID" type="xs:string" nillable="true" default="" form="Element"/>
+		<property name="SkladID" type="xs:integer" nillable="true"/>
+		<property name="PaymentType" type="xs:integer" nillable="true"/>
+		<property name="Dostavka" type="xs:string" nillable="true"/>
+		<property name="OrderSource" type="xs:int" nillable="true" fixed="false"/>
+	</objectType>
+	<objectType name="OrderHeaders_2020">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/ZAK" name="Lines" type="d3p1:OrderHeader_2020" upperBound="-1"/>
+	</objectType>
+</package>

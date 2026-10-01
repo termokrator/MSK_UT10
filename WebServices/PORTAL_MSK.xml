@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WebService uuid="4fec1d0c-7eba-4c2b-b709-66c133e83da6">
+		<Properties>
+			<Name>PORTAL_MSK</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>PORTAL MSK</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Все процедуры портала</Comment>
+			<Namespace>http://ws.moskvorechie.ru:80/IST</Namespace>
+			<XDTOPackages>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="xr:MDObjectRef">XDTOPackage.Portal</xr:Value>
+				</xr:Item>
+			</XDTOPackages>
+			<DescriptorFileName>PORTAL_MSK.1cws</DescriptorFileName>
+			<ReuseSessions>DontUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<Operation uuid="c3c74a48-907d-49fe-b3d6-0adc3251905f">
+				<Properties>
+					<Name>AZ_A_DOC_6951_DEL_PORTAL</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>AZ_A_DOC_6951_DEL_PORTAL</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_AZ_A_DOC_6951_DEL_PORTAL</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>AZ_A_DOC_6951_DEL_PORTAL</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="61d00d7e-1e00-4fd4-8bdc-bc356f9ed981">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_AZ_A_DOC_6951_DEL_PORTAL</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="b07ea8ea-eaf5-4024-8cf1-d55e49c0cee9">
+				<Properties>
+					<Name>PM_6051_DOC_FOR_PORTAL</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>PM_6051_DOC_FOR_PORTAL</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_PM_6051_DOC_FOR_PORTAL</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>PM_6051_DOC_FOR_PORTAL</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="c30962a3-98ad-4a8c-98cc-0365f05f59e5">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_PM_6051_DOC_FOR_PORTAL</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="0c6eb768-b220-41ac-aba4-c270adc80e13">
+				<Properties>
+					<Name>PM_6951_FOR_PORTAL</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>PM_6951_FOR_PORTAL</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_PM_6951_FOR_PORTAL</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>PM_6951_FOR_PORTAL</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="d5ffe41c-3fa3-4603-8e5f-0ded2058af5e">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_PM_6951_FOR_PORTAL</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="a903eae5-8114-40af-b2bc-1a1a3351fbcb">
+				<Properties>
+					<Name>PM_GET_RNS_STR_FOR_PORTAL_OLD</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>PM_GET_RNS_STR_FOR_PORTAL</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_PM_GET_RNS_STR_FOR_PORTAL</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>PM_GET_RNS_STR_FOR_PORTAL</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="0ef59267-cec4-4493-a09a-937f79dee58f">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_PM_GET_RNS_STR_FOR_PORTAL</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="19a29f94-45f8-4a31-8644-e92359b9eebf">
+				<Properties>
+					<Name>PM_GET_RNS_STR_FOR_PORTAL</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>PM_GET_RNS_STR_FOR_PORTAL_2021</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_PM_GET_RNS_STR_FOR_PORTAL_2021</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>PM_GET_RNS_STR_FOR_PORTAL_2021</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="ae7dbbb9-94cd-430e-b122-459f01ad154d">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_PM_GET_RNS_STR_FOR_PORTAL_2021</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="899d971e-8975-402b-b86d-6d00e453be1a">
+				<Properties>
+					<Name>PM_GET_ZP_PORTAL</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>PM_GET_ZP_PORTAL</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_PM_GET_ZP_PORTAL</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>PM_GET_ZP_PORTAL</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="66dcf0d8-d5d3-4186-bbe1-0a0418697ceb">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_PM_GET_ZP_PORTAL</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="916dd751-4cce-4aef-aeff-8056d36044ce">
+				<Properties>
+					<Name>RA_INS_UPDATE_STROKA_IZ_PORTALA</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>R a INS UPDATE STROKA i z PORTALA</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_RA_INS_UPDATE_STROKA_IZ_PORTALA</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>RA_INS_UPDATE_STROKA_IZ_PORTALA</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="a1f5a1a2-139e-4508-956a-7a6a1bac368d">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_RA_INS_UPDATE_STROKA_IZ_PORTALA</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="dd49b438-f90d-443e-a47a-4e2c82199c3e">
+				<Properties>
+					<Name>RA_MOVE_DOC_FOR_PORTAL</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>R a MOVE DOC FOR PORTAL</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_RA_MOVE_DOC_FOR_PORTAL</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>RA_MOVE_DOC_FOR_PORTAL</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="ae7fff43-2b89-4044-8f84-74c559f2bc4d">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_RA_MOVE_DOC_FOR_PORTAL</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="8e77f079-68ea-4e83-904a-8da018a1d6e9">
+				<Properties>
+					<Name>RA_R_RN_LIN</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>RA_R_RN_LIN</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_RA_R_RN_LIN</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>RA_R_RN_LIN</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="bc2009c7-c9a6-46ea-81f2-8ab0f87c73db">
+						<Properties>
+							<Name>IncomingSettings</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Incoming settings</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:Incom_RA_R_RN_LIN</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+			<Operation uuid="8ceb77d8-8b64-4875-af98-94f053da2a47">
+				<Properties>
+					<Name>PM_GET_CHANGES_FOR_ORDER</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>PM GET CHANGES FOR ORDER</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<XDTOReturningValueType xmlns:d6p1="http://ws.moskvorechie.ru:80/IST">d6p1:RS_PM_GET_CHANGES_FOR_ORDER</XDTOReturningValueType>
+					<Nillable>false</Nillable>
+					<Transactioned>false</Transactioned>
+					<ProcedureName>PM_GET_CHANGES_FOR_ORDER</ProcedureName>
+					<DataLockControlMode>Automatic</DataLockControlMode>
+				</Properties>
+				<ChildObjects>
+					<Parameter uuid="707d933c-3bdb-4441-8c15-f7d47e70acb1">
+						<Properties>
+							<Name>Header</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Header</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:HEADER_PM_GET_CHANGES_FOR_ORDER</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+					<Parameter uuid="d1193b00-931f-48cf-ade3-07d5f72178ea">
+						<Properties>
+							<Name>Lines</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Lines</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<XDTOValueType xmlns:d8p1="http://ws.moskvorechie.ru:80/IST">d8p1:ORDERLINES_PM_GET_CHANGES_FOR_ORDER</XDTOValueType>
+							<Nillable>false</Nillable>
+							<TransferDirection>In</TransferDirection>
+						</Properties>
+					</Parameter>
+				</ChildObjects>
+			</Operation>
+		</ChildObjects>
+	</WebService>
+</MetaDataObject>

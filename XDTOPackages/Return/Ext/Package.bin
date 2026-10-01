@@ -1,0 +1,119 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://ws.moskvorechie.ru:80/RET">
+	<objectType name="ReturnHeader">
+		<property name="KONTRAGENT_" type="xs:string"/>
+	</objectType>
+	<objectType name="ReturnLine">
+		<property name="Count" type="xs:integer" nillable="true"/>
+		<property name="Comment" type="xs:string" nillable="true"/>
+		<property name="IsDost" type="xs:boolean" nillable="true"/>
+		<property name="ReasonRet" type="xs:integer" nillable="true" form="Element"/>
+		<property name="EID" type="xs:integer" nillable="true"/>
+		<property name="SaleID" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="ReturnLines">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/RET" name="Lines" type="d3p1:ReturnLine" upperBound="-1"/>
+	</objectType>
+	<objectType name="ReturnOutForPortal">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/RET" name="OutForPortalLines" type="d3p1:ReturnOutLine" upperBound="-1"/>
+	</objectType>
+	<objectType name="ReturnOutLine">
+		<property name="Sale_Number" type="xs:string"/>
+		<property name="Status" type="xs:integer"/>
+		<property name="MSG" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Incom_Nom_For_Return">
+		<property name="KONTRAGENT_" type="xs:string"/>
+		<property name="BEGIN_DATE_" type="xs:date" nillable="true"/>
+		<property name="END_DATE_" type="xs:date" nillable="true"/>
+		<property name="FILIALS" type="xs:string" nillable="true"/>
+		<property name="ARTICUL" type="xs:string" nillable="true"/>
+		<property name="NOMER_DOC" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Out_Nom_For_Return">
+		<property name="DID_6051" type="xs:string"/>
+		<property name="DCODE_6051" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="DDATE1_6051" type="xs:dateTime"/>
+		<property name="FILIAL_NAME" type="xs:string"/>
+		<property name="DNOTE" type="xs:string"/>
+		<property name="DOGOVOR_NAME" type="xs:string"/>
+		<property name="SKLAD_NAME" type="xs:string"/>
+		<property name="UR_LICO" type="xs:string"/>
+		<property name="OUR_FIRM" type="xs:string"/>
+		<property name="SF" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="INV_NUM" type="xs:string" lowerBound="1" nillable="false"/>
+		<property name="VALUTA" type="xs:string"/>
+		<property name="KOEF" type="xs:integer"/>
+		<property name="KOL_VO" type="xs:integer"/>
+		<property name="PRICE" type="xs:decimal"/>
+		<property name="TOVAR_PRIMECH" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SUMMA" type="xs:decimal"/>
+		<property name="ARTICUL_OUT" type="xs:string"/>
+		<property name="TOVAR_NAME" type="xs:string"/>
+		<property name="BREND" type="xs:string"/>
+		<property name="ED_IZM" type="xs:string"/>
+		<property name="CAN_RETURN" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="EID" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="FLAG_1" type="xs:integer" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="RS_Nom_For_Return">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/RET" name="Row" type="d3p1:Out_Nom_For_Return" upperBound="-1"/>
+	</objectType>
+	<objectType name="Incom_Cancel_Return">
+		<property name="IDDOC" type="xs:string"/>
+		<property name="KONTRAGENT_" type="xs:string"/>
+	</objectType>
+	<objectType name="Out_Cancel_Return">
+		<property name="RESULT" type="xs:integer" lowerBound="0" nillable="false"/>
+		<property name="MSG" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="RS_Cancel_Return">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/RET" name="Row" type="d3p1:Out_Cancel_Return" upperBound="-1"/>
+	</objectType>
+	<objectType name="Incom_Returns_For_Portal">
+		<property name="KONTRAGENT_" type="xs:string"/>
+		<property name="BEGIN_DATE_" type="xs:date" nillable="true"/>
+		<property name="END_DATE_" type="xs:date" nillable="true"/>
+		<property name="DSTATE_" type="xs:string" nillable="true"/>
+		<property name="FILIALS" type="xs:string" nillable="true"/>
+		<property name="ARTICUL" type="xs:string" nillable="true"/>
+		<property name="NOMER_DOC" type="xs:string" nillable="true"/>
+	</objectType>
+	<objectType name="Out_Returns_For_Portal">
+		<property name="DID_6002" type="xs:string"/>
+		<property name="DCODE_6002" type="xs:string"/>
+		<property name="DDATE_6002" type="xs:dateTime"/>
+		<property name="FILIAL_NAME" type="xs:string"/>
+		<property name="DNOTE" type="xs:string"/>
+		<property name="VALUTA_NAME" type="xs:string"/>
+		<property name="DOGOVOR_NAME" type="xs:string"/>
+		<property name="SKLAD_NAME" type="xs:string"/>
+		<property name="UR_LICO" type="xs:string"/>
+		<property name="OUR_FIRM" type="xs:string"/>
+		<property name="STATUS" type="xs:string"/>
+		<property name="STATUS_ID" type="xs:integer"/>
+		<property name="FLAG_1" type="xs:integer" lowerBound="0" nillable="true"/>
+		<property name="SF" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="INV_NUM" type="xs:string" lowerBound="1" nillable="false"/>
+		<property name="KOEF" type="xs:integer"/>
+		<property name="KOL_VO" type="xs:integer"/>
+		<property name="PRICE" type="xs:decimal"/>
+		<property name="TOVAR_PRIMECH" type="xs:string" lowerBound="0" nillable="true"/>
+		<property name="SUMMA" type="xs:decimal"/>
+		<property name="ARTICUL_OUT" type="xs:string"/>
+		<property name="TOVAR_NAME" type="xs:string"/>
+		<property name="BREND" type="xs:string"/>
+		<property name="ED_IZM" type="xs:string"/>
+		<property name="EID" type="xs:integer" lowerBound="0"/>
+		<property name="IS_RECLAMAC" type="xs:integer"/>
+		<property name="SALE_NAKL" type="xs:string"/>
+		<property name="KONTRAGENT_NAME" type="xs:string"/>
+		<property name="DATE_SF" type="xs:dateTime"/>
+		<property name="ORG" type="xs:string"/>
+		<property name="INN" type="xs:string"/>
+		<property name="KPP" type="xs:string"/>
+		<property name="COLOR" type="xs:string" lowerBound="0" nillable="true"/>
+	</objectType>
+	<objectType name="RS_Returns_For_Portal">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/RET" name="Row" type="d3p1:Out_Returns_For_Portal" upperBound="-1"/>
+	</objectType>
+</package>

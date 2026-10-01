@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Дата" id="1">
+			<DataPath>Запись.Дата</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ШтрихкодНоменклатуры" id="4">
+			<DataPath>Запись.ШтрихкодНоменклатуры</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ШтрихкодНоменклатурыКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ШтрихкодНоменклатурыРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Документ" id="16">
+			<DataPath>Запись.Документ</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДокументКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДокументРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Действие" id="7">
+			<DataPath>Запись.Действие</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДействиеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ДействиеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<CheckBoxField name="РезультатПроверки" id="10">
+			<DataPath>Запись.Успешно</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РезультатПроверкиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="РезультатПроверкиРасширеннаяПодсказка" id="12"/>
+		</CheckBoxField>
+		<InputField name="ПричинаЗапрета" id="19">
+			<DataPath>Запись.ПричинаЗапрета</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПричинаЗапретаКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ПричинаЗапретаРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Данные" id="13">
+			<DataPath>Запись.Данные</DataPath>
+			<TitleLocation>Top</TitleLocation>
+			<Height>20</Height>
+			<MultiLine>true</MultiLine>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДанныеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДанныеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ИсторияКодовМаркировокПиОТ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

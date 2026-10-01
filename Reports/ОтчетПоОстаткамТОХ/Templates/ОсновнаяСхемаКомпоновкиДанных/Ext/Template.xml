@@ -1,0 +1,727 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДоговорКонтрагента</dataPath>
+			<field>ДоговорКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВыкупТОХ</dataPath>
+			<field>ВыкупТОХ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выкуп ТОХ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыкупа</dataPath>
+			<field>ДатаВыкупа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выкупа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Качество</dataPath>
+			<field>Качество</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Склад</dataPath>
+			<field>Склад</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СерияНоменклатуры</dataPath>
+			<field>СерияНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ХарактеристикаНоменклатуры</dataPath>
+			<field>ХарактеристикаНоменклатуры</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Бренд</dataPath>
+			<field>Бренд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бренд</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТОХОстаток</dataPath>
+			<field>ТОХОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТОХ остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>МТОстаток</dataPath>
+			<field>МТОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>МТ остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТОХПереданныеОстаток</dataPath>
+			<field>ТОХПереданныеОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТОХ Переданные остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Филиал</dataPath>
+			<field>Филиал</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТОХПоставщиковОстаток</dataPath>
+			<field>ТОХПоставщиковОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТОХ Поставщиков остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Договор</dataPath>
+			<field>Договор</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СкладОстаток</dataPath>
+			<field>СкладОстаток</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Склад остаток</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Метрика_1</dataPath>
+			<field>Метрика_1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метрика 1</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Метрика_2</dataPath>
+			<field>Метрика_2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метрика 2</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Метрика_3</dataPath>
+			<field>Метрика_3</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метрика 3</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Метрика_5</dataPath>
+			<field>Метрика_5</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Метрика 5</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Константы.ПополнениеДляОбособленногоПодразделенияЮЛ
+ПОМЕСТИТЬ КонстантаОП
+ИЗ
+	Константы КАК Константы
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТоварыОтветственногоХранения.Номенклатура,
+	МАКСИМУМ(ТоварыОтветственногоХранения.Регистратор) КАК Регистратор
+ПОМЕСТИТЬ ВТ_НоменклатураТОХ
+ИЗ
+	РегистрНакопления.ТоварыОтветственногоХранения КАК ТоварыОтветственногоХранения
+ГДЕ
+	ТоварыОтветственногоХранения.Регистратор ССЫЛКА Документ.ПоступлениеТоваровНаОтветственноеХранение
+{ГДЕ
+	ТоварыОтветственногоХранения.Номенклатура.*,
+	ТоварыОтветственногоХранения.Номенклатура.Родитель.* КАК Бренд}
+
+СГРУППИРОВАТЬ ПО
+	ТоварыОтветственногоХранения.Номенклатура
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_НоменклатураТОХ.Номенклатура,
+	ВТ_НоменклатураТОХ.Регистратор.ДоговорКонтрагента КАК ДоговорКонтрагента
+ПОМЕСТИТЬ ВТ_НоменклатураСДоговором
+ИЗ
+	ВТ_НоменклатураТОХ КАК ВТ_НоменклатураТОХ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_НоменклатураСДоговором.ДоговорКонтрагента,
+	МАКСИМУМ(ТоварыТОХпоДаннымПоставщиков.Регистратор) КАК ВыкупТОХ,
+	МАКСИМУМ(ТоварыТОХпоДаннымПоставщиков.Регистратор.Дата) КАК ДатаВыкупа
+ПОМЕСТИТЬ ВТ_ВыкупыТОХПредварительная
+ИЗ
+	ВТ_НоменклатураСДоговором КАК ВТ_НоменклатураСДоговором
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрНакопления.ТоварыТОХпоДаннымПоставщиков КАК ТоварыТОХпоДаннымПоставщиков
+		ПО ВТ_НоменклатураСДоговором.ДоговорКонтрагента = ТоварыТОХпоДаннымПоставщиков.Договор
+			И (ТоварыТОХпоДаннымПоставщиков.Регистратор ССЫЛКА Документ.ВыкупСОтветственногоХранения)
+			И (НЕ ТоварыТОХпоДаннымПоставщиков.Регистратор.Статус = ЗНАЧЕНИЕ(Перечисление.СтатусыТОХ.ВозвратПоБраку))
+			И (ТоварыТОХпоДаннымПоставщиков.Регистратор.Дата &lt;= &amp;КонецПериода)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ КонстантаОП КАК КонстантаОП
+		ПО (ИСТИНА)
+ГДЕ
+	ВЫБОР
+			КОГДА КонстантаОП.ПополнениеДляОбособленногоПодразделенияЮЛ = ЛОЖЬ
+				ТОГДА ТоварыТОХпоДаннымПоставщиков.Регистратор.Филиал = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ
+
+СГРУППИРОВАТЬ ПО
+	ВТ_НоменклатураСДоговором.ДоговорКонтрагента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_НоменклатураСДоговором.Номенклатура,
+	ВТ_НоменклатураСДоговором.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХПредварительная.ВыкупТОХ КАК ВыкупТОХ,
+	ВТ_ВыкупыТОХПредварительная.ДатаВыкупа КАК ДатаВыкупа
+ПОМЕСТИТЬ ВТ_ВыкупыТОХ
+ИЗ
+	ВТ_НоменклатураСДоговором КАК ВТ_НоменклатураСДоговором
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ВыкупыТОХПредварительная КАК ВТ_ВыкупыТОХПредварительная
+		ПО ВТ_НоменклатураСДоговором.ДоговорКонтрагента = ВТ_ВыкупыТОХПредварительная.ДоговорКонтрагента
+
+СГРУППИРОВАТЬ ПО
+	ВТ_НоменклатураСДоговором.Номенклатура,
+	ВТ_НоменклатураСДоговором.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХПредварительная.ВыкупТОХ,
+	ВТ_ВыкупыТОХПредварительная.ДатаВыкупа
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа,
+	СУММА(ВЫБОР
+			КОГДА ТоварыНаСкладахОстаткиИОбороты.Период = &amp;НачалоПериода
+				ТОГДА ТоварыНаСкладахОстаткиИОбороты.КоличествоКонечныйОстаток
+			ИНАЧЕ ВЫБОР
+					КОГДА ТоварыНаСкладахОстаткиИОбороты.Период &lt;= ВТ_ВыкупыТОХ.ДатаВыкупа
+						ТОГДА ТоварыНаСкладахОстаткиИОбороты.КоличествоОборот
+					ИНАЧЕ 0
+				КОНЕЦ
+		КОНЕЦ) КАК СкладОстаток,
+	СУММА(0) КАК МТОстаток,
+	СУММА(0) КАК ТОХОстаток,
+	СУММА(0) КАК ТОХПереданныеОстаток,
+	СУММА(0) КАК ТОХПоставщиковОстаток
+ПОМЕСТИТЬ ВТ_Итоговая
+ИЗ
+	ВТ_ВыкупыТОХ КАК ВТ_ВыкупыТОХ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ТоварыНаСкладах.ОстаткиИОбороты(
+				&amp;НачалоПериода,
+				&amp;КонецПериода,
+				День,
+				,
+				Номенклатура В
+					(ВЫБРАТЬ
+						ТабНом.Номенклатура
+					ИЗ
+						ВТ_НоменклатураТОХ КАК ТабНом)) КАК ТоварыНаСкладахОстаткиИОбороты
+		ПО ВТ_ВыкупыТОХ.Номенклатура = ТоварыНаСкладахОстаткиИОбороты.Номенклатура
+{ГДЕ
+	ТоварыНаСкладахОстаткиИОбороты.Номенклатура.*,
+	ТоварыНаСкладахОстаткиИОбороты.Склад.*,
+	ТоварыНаСкладахОстаткиИОбороты.Номенклатура.Родитель.* КАК Бренд}
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа,
+	СУММА(0),
+	СУММА(ВЫБОР
+			КОГДА ТоварыОрганизацийМТОстаткиИОбороты.Период = &amp;НачалоПериода
+				ТОГДА ТоварыОрганизацийМТОстаткиИОбороты.КоличествоКонечныйОстаток
+			ИНАЧЕ ВЫБОР
+					КОГДА ТоварыОрганизацийМТОстаткиИОбороты.Период &lt;= ВТ_ВыкупыТОХ.ДатаВыкупа
+						ТОГДА ТоварыОрганизацийМТОстаткиИОбороты.КоличествоОборот
+					ИНАЧЕ 0
+				КОНЕЦ
+		КОНЕЦ),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0)
+ИЗ
+	ВТ_ВыкупыТОХ КАК ВТ_ВыкупыТОХ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ТоварыОрганизацийМТ.ОстаткиИОбороты(
+				&amp;НачалоПериода,
+				&amp;КонецПериода,
+				День,
+				,
+				Номенклатура В
+					(ВЫБРАТЬ
+						ТабНом.Номенклатура
+					ИЗ
+						ВТ_НоменклатураТОХ КАК ТабНом)) КАК ТоварыОрганизацийМТОстаткиИОбороты
+		ПО ВТ_ВыкупыТОХ.Номенклатура = ТоварыОрганизацийМТОстаткиИОбороты.Номенклатура
+{ГДЕ
+	ТоварыОрганизацийМТОстаткиИОбороты.Номенклатура.*,
+	ТоварыОрганизацийМТОстаткиИОбороты.Склад.*,
+	ТоварыОрганизацийМТОстаткиИОбороты.Номенклатура.Родитель.* КАК Бренд}
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа,
+	СУММА(0),
+	СУММА(0),
+	СУММА(ВЫБОР
+			КОГДА ТоварыОтветственногоХраненияОстаткиИОбороты.Период = &amp;НачалоПериода
+				ТОГДА ТоварыОтветственногоХраненияОстаткиИОбороты.КоличествоКонечныйОстаток
+			ИНАЧЕ ВЫБОР
+					КОГДА ТоварыОтветственногоХраненияОстаткиИОбороты.Период &lt;= ВТ_ВыкупыТОХ.ДатаВыкупа
+						ТОГДА ТоварыОтветственногоХраненияОстаткиИОбороты.КоличествоОборот
+					ИНАЧЕ 0
+				КОНЕЦ
+		КОНЕЦ),
+	СУММА(0),
+	СУММА(0)
+ИЗ
+	ВТ_ВыкупыТОХ КАК ВТ_ВыкупыТОХ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ТоварыОтветственногоХранения.ОстаткиИОбороты(
+				&amp;НачалоПериода,
+				&amp;КонецПериода,
+				День,
+				,
+				Номенклатура В
+					(ВЫБРАТЬ
+						ТабНом.Номенклатура
+					ИЗ
+						ВТ_НоменклатураТОХ КАК ТабНом)) КАК ТоварыОтветственногоХраненияОстаткиИОбороты
+		ПО ВТ_ВыкупыТОХ.Номенклатура = ТоварыОтветственногоХраненияОстаткиИОбороты.Номенклатура
+			И ВТ_ВыкупыТОХ.ДоговорКонтрагента = ТоварыОтветственногоХраненияОстаткиИОбороты.ДоговорКонтрагента
+{ГДЕ
+	ТоварыОтветственногоХраненияОстаткиИОбороты.Номенклатура.*,
+	ТоварыОтветственногоХраненияОстаткиИОбороты.Номенклатура.Родитель.* КАК Бренд}
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа,
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(ВЫБОР
+			КОГДА ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты.Период = &amp;НачалоПериода
+				ТОГДА ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты.КоличествоКонечныйОстаток
+			ИНАЧЕ ВЫБОР
+					КОГДА ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты.Период &lt;= ВТ_ВыкупыТОХ.ДатаВыкупа
+						ТОГДА ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты.КоличествоОборот
+					ИНАЧЕ 0
+				КОНЕЦ
+		КОНЕЦ),
+	СУММА(0)
+ИЗ
+	ВТ_ВыкупыТОХ КАК ВТ_ВыкупыТОХ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ТоварыОтветственногоХраненияПереданные.ОстаткиИОбороты(
+				&amp;НачалоПериода,
+				&amp;КонецПериода,
+				День,
+				,
+				Номенклатура В
+					(ВЫБРАТЬ
+						ТабНом.Номенклатура
+					ИЗ
+						ВТ_НоменклатураТОХ КАК ТабНом)) КАК ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты
+		ПО ВТ_ВыкупыТОХ.Номенклатура = ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты.Номенклатура
+			И ВТ_ВыкупыТОХ.ДоговорКонтрагента = ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты.ДоговорКонтрагента
+{ГДЕ
+	ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты.Номенклатура.*,
+	ТоварыОтветственногоХраненияПереданныеОстаткиИОбороты.Номенклатура.Родитель.* КАК Бренд}
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа,
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(0),
+	СУММА(ВЫБОР
+			КОГДА ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты.Период = &amp;НачалоПериода
+				ТОГДА ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты.КоличествоКонечныйОстаток
+			ИНАЧЕ ВЫБОР
+					КОГДА ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты.Период &lt;= ВТ_ВыкупыТОХ.ДатаВыкупа
+						ТОГДА ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты.КоличествоОборот
+					ИНАЧЕ 0
+				КОНЕЦ
+		КОНЕЦ)
+ИЗ
+	ВТ_ВыкупыТОХ КАК ВТ_ВыкупыТОХ
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ТоварыТОХпоДаннымПоставщиков.ОстаткиИОбороты(
+				&amp;НачалоПериода,
+				&amp;КонецПериода,
+				День,
+				,
+				Номенклатура В
+					(ВЫБРАТЬ
+						ТабНом.Номенклатура
+					ИЗ
+						ВТ_НоменклатураТОХ КАК ТабНом)) КАК ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты
+		ПО ВТ_ВыкупыТОХ.Номенклатура = ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты.Номенклатура
+			И ВТ_ВыкупыТОХ.ДоговорКонтрагента = ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты.Договор
+{ГДЕ
+	ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты.Номенклатура.*,
+	ТоварыТОХпоДаннымПоставщиковОстаткиИОбороты.Номенклатура.Родитель.* КАК Бренд}
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ВыкупыТОХ.Номенклатура,
+	ВТ_ВыкупыТОХ.ДоговорКонтрагента,
+	ВТ_ВыкупыТОХ.ВыкупТОХ,
+	ВТ_ВыкупыТОХ.ДатаВыкупа
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Итоговая.Номенклатура,
+	ВТ_Итоговая.ДоговорКонтрагента,
+	ВТ_Итоговая.ВыкупТОХ,
+	ВТ_Итоговая.ДатаВыкупа,
+	СУММА(ВТ_Итоговая.СкладОстаток) КАК СкладОстаток,
+	СУММА(ВТ_Итоговая.МТОстаток) КАК МТОстаток,
+	СУММА(ВТ_Итоговая.ТОХОстаток) КАК ТОХОстаток,
+	СУММА(ВТ_Итоговая.ТОХПереданныеОстаток) КАК ТОХПереданныеОстаток,
+	СУММА(ВТ_Итоговая.ТОХПоставщиковОстаток) КАК ТОХПоставщиковОстаток,
+	СУММА(ВТ_Итоговая.МТОстаток) КАК Метрика_1,
+	СУММА(ВТ_Итоговая.СкладОстаток - ВТ_Итоговая.МТОстаток - ВТ_Итоговая.ТОХПоставщиковОстаток + ВТ_Итоговая.ТОХПереданныеОстаток) КАК Метрика_2,
+	СУММА(ВТ_Итоговая.ТОХПоставщиковОстаток - ВТ_Итоговая.ТОХОстаток) КАК Метрика_3,
+	СУММА(ВТ_Итоговая.ТОХОстаток) - СУММА(ВТ_Итоговая.ТОХПереданныеОстаток) КАК Метрика_5
+ИЗ
+	ВТ_Итоговая КАК ВТ_Итоговая
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Итоговая.Номенклатура,
+	ВТ_Итоговая.ДоговорКонтрагента,
+	ВТ_Итоговая.ВыкупТОХ,
+	ВТ_Итоговая.ДатаВыкупа</query>
+	</dataSet>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<denyIncompleteValues>true</denyIncompleteValues>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Соответствие регистров по процессу ТОХ</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.Артикул</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.Родитель</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Бренд</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура.КодПроизводителя</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Код производителя</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоговорКонтрагента.Владелец</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДоговорКонтрагента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВыкупа</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СкладОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>МТОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТОХОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТОХПереданныеОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТОХПоставщиковОстаток</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Метрика_1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Метрика_2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Метрика_3</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Метрика_5</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>c2808950-ce79-4ab9-a2a3-0f08a39cb89d</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Номенклатура.Артикул</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+					<dcsset:userSettingID>a8b530a8-e48d-4074-89b5-504d7f8826a9</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Артикул</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Бренд</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Номенклатура.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>6fd7b177-bd70-4eae-b9a6-b5b75c8bfaa5</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>5b209fb8-fd30-47c9-a423-359894c01c5f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Склад</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Склады.ПустаяСсылка</dcsset:right>
+					<dcsset:userSettingID>55ed6ca0-5d30-4c94-a082-e2c3547d58c8</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemGroup">
+					<dcsset:groupType>OrGroup</dcsset:groupType>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Метрика_1</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						<dcsset:userSettingID>f9188ded-0d85-4dd3-b608-a24fd45f933f</dcsset:userSettingID>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Метрика_2</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						<dcsset:userSettingID>5220b808-51f5-4dd7-9a3b-fad86cd5b7f7</dcsset:userSettingID>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Метрика_3</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						<dcsset:userSettingID>5b521e4c-46a2-4218-90de-7243b50ff632</dcsset:userSettingID>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Метрика_5</dcsset:left>
+						<dcsset:comparisonType>Less</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						<dcsset:userSettingID>d0c6d08c-baa1-4c9e-8a61-d73567c550a7</dcsset:userSettingID>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisYear</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfThisDay</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ДатаВыкупа</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеРеквизитов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionAttributesPlacement">Separately</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

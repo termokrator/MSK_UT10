@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<HTTPService uuid="7e721eb2-9d29-4978-ba40-c96c133af52a">
+		<Properties>
+			<Name>OnlineStore</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Online store</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<RootURL>api</RootURL>
+			<ReuseSessions>AutoUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="f7ca1211-1f3a-45b5-904b-82859f4a4880">
+				<Properties>
+					<Name>client_payments</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Client payments</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/client/payments/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="442bd950-5e41-4259-b424-652859d7cbb1">
+						<Properties>
+							<Name>ПолучитьИсториюПлатежей</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить историю платежей</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьИсториюПлатежей</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="149022dd-eeee-4e4a-80b1-b3bfe55a59b0">
+				<Properties>
+					<Name>docsale</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Docsale</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/docsale/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="455fd607-d919-4692-b08b-a8234d69cbb6">
+						<Properties>
+							<Name>ПолучитьДанныеДокументаОтгрузки</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить данные документа отгрузки</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьДанныеДокументаОтгрузки</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="cc115a15-d62e-4afe-99a9-00241e6eba6d">
+				<Properties>
+					<Name>orders</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Orders</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/orders/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="fd152a2d-0321-4b07-bc69-e81da9018fb7">
+						<Properties>
+							<Name>ПолучитьДанныеПоЗаказам</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить данные по заказам</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьДанныеПоЗаказам</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="aa670fed-dc3e-4229-a120-25f06ff84395">
+				<Properties>
+					<Name>returns</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Returns</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/returns/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="1f129556-11e2-493a-a8a3-e400d9724de9">
+						<Properties>
+							<Name>ПолучитьДанныеПоВозвратам</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить данные по возвратам</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьДанныеПоВозвратам</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="9af0d34c-5a1c-4c54-8dd3-8033693621ac">
+				<Properties>
+					<Name>payments_docsales</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Payments docsales</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/payments/docsales/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="89867204-3f5a-4a57-9358-dae77d7d0893">
+						<Properties>
+							<Name>ПолучитьСписокРеализацийДляОплаты</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить список реализаций для оплаты</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьСписокРеализацийДляОплаты</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="711215c5-1412-4868-800e-dfb20b74b4ec">
+				<Properties>
+					<Name>payments_docsale_summ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Payments docsale summ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/payments/docsale/summ/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="6fc36681-4670-4e6b-90ba-09411bd593cc">
+						<Properties>
+							<Name>ПолучитьСуммуДляОплатыПоРеализации</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить сумму для оплаты по реализации</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьСуммуДляОплатыПоРеализации</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="dda64516-1b55-4adc-bc0f-1fbf3d40c6b0">
+				<Properties>
+					<Name>payments_docsale_block</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Payments docsale block</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/payments/docsale/block/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="befef85e-a7f1-4dae-9300-34169cfb16dd">
+						<Properties>
+							<Name>ЗаблокироватьРеализацию</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заблокировать реализацию</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ЗаблокироватьРеализацию</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="04fe9703-4feb-42d9-976f-9981f4069d28">
+				<Properties>
+					<Name>payments_create</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Payments create</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/payments/create/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="5c43fef0-950b-448a-ac52-c41675ff2ecd">
+						<Properties>
+							<Name>СоздатьОплатуПлатежнойКартой</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать оплату платежной картой</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>СоздатьОплатуПлатежнойКартой</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="afbb6e82-1907-49b8-baf5-5e9b07275235">
+				<Properties>
+					<Name>order_create</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Order create</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/order/create/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="c507631a-ce52-4847-9260-da4b56909710">
+						<Properties>
+							<Name>СоздатьЗаказ</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать заказ</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>СоздатьЗаказ</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="4dfb9b2e-b42c-4f1e-be27-6f1905fd8732">
+				<Properties>
+					<Name>order_run</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Order run</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/order/run/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="26f13404-bdfc-46e6-afe7-b2328c7e9500">
+						<Properties>
+							<Name>ОтменитьРезервЗаказа</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отменить резерв заказа</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ОтменитьРезервЗаказа</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="bb230faf-6c37-4db1-9270-51f2a9537a8e">
+				<Properties>
+					<Name>order_delete</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Order delete</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/order/delete/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="e02db6c3-88e6-4111-82ee-4734c2e1f768">
+						<Properties>
+							<Name>ЗакрытьЗаказПокупателя</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Закрыть заказ покупателя</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ЗакрытьЗаказПокупателя</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="e39775bb-0285-4545-8ae2-b4f673efd475">
+				<Properties>
+					<Name>order_goods_update</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Order goods update</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/order/goods/update/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="d87a5228-cd1c-4cb8-b34b-8e4a240eb447">
+						<Properties>
+							<Name>СкорректироватьТоварЗаказа</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Скорректировать товар заказа</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>СкорректироватьТоварЗаказа</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="5ff2f797-86ec-41b3-91fb-ad30ceb13960">
+				<Properties>
+					<Name>return_delete</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Return delete</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/return/delete/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="bc407a66-c9d8-4297-9db2-4ba44137ae8b">
+						<Properties>
+							<Name>ОтменитьВозвратПокупателя</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отменить возврат покупателя</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>ОтменитьВозвратПокупателя</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="126d28af-9366-41c8-8d86-2b6ac065eecf">
+				<Properties>
+					<Name>return_create</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Создать заявку на возврат</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/return/create/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="d1b512e0-3c20-4e7b-9446-f2bea6641df9">
+						<Properties>
+							<Name>СоздатьЗаявкуНаВозврат</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать заявку на возврат</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>POST</HTTPMethod>
+							<Handler>СоздатьЗаявкуНаВозврат</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="a244eea4-21df-4c94-8915-d38db0b7ab9b">
+				<Properties>
+					<Name>docs</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Docs</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/docs/</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="479b2df5-e12b-42b9-b004-b41701b20986">
+						<Properties>
+							<Name>ПолучитьФайлыДокументов</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить файлы документов</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьФайлыДокументов</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="203882fe-9d56-41a8-90c9-18a4fc75fc79">
+				<Properties>
+					<Name>docs_invoice</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Docs invoice</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/docs/invoice</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="a13baeac-f1ad-40cb-b294-3ee45494ed7c">
+						<Properties>
+							<Name>ПолучитьПараметрыСчетаНаОплату</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить параметры счета на оплату</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьПараметрыСчетаНаОплату</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="24f170e3-50d2-492c-b23f-20e0fdf20044">
+				<Properties>
+					<Name>nom_for_return</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Nom for return</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/nom/for/return</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="e2863c2e-ff4d-4aeb-8390-267650ec3075">
+						<Properties>
+							<Name>ПолучитьНоменклатурыДляВозврата</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Получить номенклатуры для возврата</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьНоменклатурыДляВозврата</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>

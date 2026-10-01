@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<Subsystem uuid="c097ed09-f487-4ade-9bbb-f55d9ceb55e8">
+		<Properties>
+			<Name>ПЛ_УведомленияОСобытиях</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомления о событиях</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Организация рассылок и уведомлений о событиях в системе</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<UseOneCommand>false</UseOneCommand>
+			<Explanation/>
+			<Picture>
+				<xr:Ref>CommonPicture.ПЛ_ПодсистемаУведомленияОСобытиях16</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПЛ_УведомленияОСобытиях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ПодсистемаУведомленияОСобытиях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПЛ_ИсточникиСобытий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_Настройка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПЛ_ВидыУсловийУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПЛ_СпособыАдресацииУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПЛ_События</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПЛ_ПриЗаписиСведенийДляУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПЛ_ПриЗаписиСправочниковДляУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПЛ_ПриПроведенииДокументовДляУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПЛ_УведомленияОСобытиях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ПЛ_ЦветОтрицательный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ПЛ_ЦветПоложительный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Constant.ПЛ_НастройкиУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_Развернуть</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_Свернуть</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПЛ_ПериодичностьРегламентныхПроверок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПЛ_ДелениеУведомленийПоАдресатам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.ПЛ_УведомленияОСобытиях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ScheduledJob.ПЛ_УведомленияПоРегламентнымПроверкам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.ПЛ_РедактированиеУведомленийОСобытиях</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.ПЛ_Уведомления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПЛ_СпособыДоставкиУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_Предупреждение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_Скрепка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПЛ_ПровайдерыСМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">XDTOPackage.PL_ApplicationPermissions_1_0_0_2</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПЛ_ОтправкаСМС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПЛ_Функции83</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ПодсистемаУведомленияОСобытиях16</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.ПЛ_Подписчики</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПЛ_Рассылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.ПЛ_УведомленияОСобытияхКлиентСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.ПЛ_ПриЗаписиДокументовДляУведомлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматВыровнятьВлево</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматВыровнятьВправо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматВыровнятьПоЦентру</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматИзменитьШрифт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматМаркированныйСписок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматНаклонный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматНумерованныйСписок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматПодчеркнутый</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматПолужирный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматПустой</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматСдвигВлево</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматСдвигВправо</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматУвеличитьШрифт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматУменьшитьШрифт</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматЦветТекста</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматЦветФона</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ФорматОчистить</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ВставитьКартинкуИзФайлаВHTML</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ВставитьКартинкуИзБуфера</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_ВставитьГиперссылку</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.ПЛ_СервисыПочтовойРассылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.ПЛ_Комментарий</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">93f80861-b2d1-4842-9915-c4996889d54a</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

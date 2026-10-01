@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоПоездокВОдномДокументе</dataPath>
+			<field>КоличествоПоездокВОдномДокументе</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество поездок</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Водитель</dataPath>
+			<field>Водитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Водитель</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.ФизическиеЛица</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задание на развоз</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:DocumentRef.ЗаданиеНаДоставку</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТарифыДоставки</dataPath>
+			<field>ТарифыДоставки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тарифы доставки</v8:content>
+				</v8:item>
+			</title>
+			<presentationExpression>"Тариф """+Строка(ТарифыДоставки)+""""</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Вес</dataPath>
+			<field>Вес</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объем</dataPath>
+			<field>Объем</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объем</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ЗаданиеНаДоставкуДоставка.Контрагент) КАК КоличествоПоездокВОдномДокументе,
+	ЗаданиеНаДоставкуДоставка.Ссылка,
+	ВЫБОР
+		КОГДА ЗаданиеНаДоставкуДоставка.Ссылка.Водитель.ИндивидуальныйПредприниматель = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+			ТОГДА ЗаданиеНаДоставкуДоставка.Ссылка.Маршрут.ТарифДоставкиШтат
+		ИНАЧЕ ЗаданиеНаДоставкуДоставка.Ссылка.Маршрут.ТарифДоставкиДляИП
+	КОНЕЦ КАК ТарифыДоставки
+ПОМЕСТИТЬ ВТ_КолВДокументе
+ИЗ
+	Документ.ЗаданиеНаДоставку.Доставка КАК ЗаданиеНаДоставкуДоставка
+ГДЕ
+	ЗаданиеНаДоставкуДоставка.Ссылка.Проведен
+{ГДЕ
+	(ЗаданиеНаДоставкуДоставка.Ссылка.Дата МЕЖДУ &amp;Дата1 И &amp;Дата2)}
+
+СГРУППИРОВАТЬ ПО
+	ЗаданиеНаДоставкуДоставка.Ссылка,
+	ВЫБОР
+		КОГДА ЗаданиеНаДоставкуДоставка.Ссылка.Водитель.ИндивидуальныйПредприниматель = ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка)
+			ТОГДА ЗаданиеНаДоставкуДоставка.Ссылка.Маршрут.ТарифДоставкиШтат
+		ИНАЧЕ ЗаданиеНаДоставкуДоставка.Ссылка.Маршрут.ТарифДоставкиДляИП
+	КОНЕЦ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_КолВДокументе.Ссылка,
+	ПогрузкаВАвтоПогружено.Грузоместо
+ПОМЕСТИТЬ ВТ_ГрузоместаПоЗаданию
+ИЗ
+	ВТ_КолВДокументе КАК ВТ_КолВДокументе
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ПогрузкаВАвто.Погружено КАК ПогрузкаВАвтоПогружено
+		ПО ВТ_КолВДокументе.Ссылка = ПогрузкаВАвтоПогружено.Ссылка.ЗаданиеНаДоставку
+ГДЕ
+	ПогрузкаВАвтоПогружено.Грузоместо.Погружено
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ВТ_ГрузоместаПоЗаданию.Ссылка,
+	СУММА(ГрузовоеМестоТовары.Количество * ГрузовоеМестоТовары.Номенклатура.ЕдиницаХраненияОстатков.Вес) КАК Вес,
+	СУММА(ГрузовоеМестоТовары.Количество * ГрузовоеМестоТовары.Номенклатура.ЕдиницаХраненияОстатков.Объем) КАК Объем
+ПОМЕСТИТЬ ВТ_ВесИОбъемПоЗаданию
+ИЗ
+	ВТ_ГрузоместаПоЗаданию КАК ВТ_ГрузоместаПоЗаданию
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ГрузовоеМесто.Товары КАК ГрузовоеМестоТовары
+		ПО ВТ_ГрузоместаПоЗаданию.Грузоместо = ГрузовоеМестоТовары.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ГрузоместаПоЗаданию.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗаданиеНаДоставку.Водитель
+ПОМЕСТИТЬ Водители
+ИЗ
+	Документ.ЗаданиеНаДоставку КАК ЗаданиеНаДоставку
+ГДЕ
+	ЗаданиеНаДоставку.Ссылка В
+			(ВЫБРАТЬ
+				ВТ_КолВДокументе.Ссылка
+			ИЗ
+				ВТ_КолВДокументе КАК ВТ_КолВДокументе)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Водители.Водитель,
+	СУММА(ВТ_КолВДокументе.КоличествоПоездокВОдномДокументе) КАК КоличествоПоездокВОдномДокументе,
+	ВТ_КолВДокументе.Ссылка,
+	ВЫБОР
+		КОГДА ВТ_КолВДокументе.ТарифыДоставки = ЗНАЧЕНИЕ(Справочник.ТарифыДоставки.ПустаяСсылка)
+			ТОГДА "Не указан"
+		ИНАЧЕ ВТ_КолВДокументе.ТарифыДоставки.Наименование
+	КОНЕЦ КАК ТарифыДоставки,
+	СУММА(ВТ_ВесИОбъемПоЗаданию.Вес) КАК Вес,
+	СУММА(ВТ_ВесИОбъемПоЗаданию.Объем) КАК Объем
+ИЗ
+	ВТ_КолВДокументе КАК ВТ_КолВДокументе
+		ЛЕВОЕ СОЕДИНЕНИЕ Водители КАК Водители
+		ПО ВТ_КолВДокументе.Ссылка.Водитель = Водители.Водитель
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ВесИОбъемПоЗаданию КАК ВТ_ВесИОбъемПоЗаданию
+		ПО ВТ_КолВДокументе.Ссылка = ВТ_ВесИОбъемПоЗаданию.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	Водители.Водитель,
+	ВТ_КолВДокументе.Ссылка,
+	ВЫБОР
+		КОГДА ВТ_КолВДокументе.ТарифыДоставки = ЗНАЧЕНИЕ(Справочник.ТарифыДоставки.ПустаяСсылка)
+			ТОГДА "Не указан"
+		ИНАЧЕ ВТ_КолВДокументе.ТарифыДоставки.Наименование
+	КОНЕЦ</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоПоездокВОдномДокументе</dataPath>
+		<expression>Сумма(КоличествоПоездокВОдномДокументе)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Вес</dataPath>
+		<expression>Сумма(Вес)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Объем</dataPath>
+		<expression>Сумма(Объем)</expression>
+	</totalField>
+	<parameter>
+		<name>Дата1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>Дата2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Водитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоПоездокВОдномДокументе</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Вес</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Объем</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТарифыДоставки</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Водитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>d62cd1a7-4f1f-4fcd-9fd8-1dd4b57ac00b</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</dcscor:value>
+					<dcsset:userSettingID>8d1cba4e-f8c1-4273-a63e-76e42913b7bc</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество поездок водителей к клиентам</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Водитель</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

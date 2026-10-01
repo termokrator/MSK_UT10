@@ -1,0 +1,457 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанныхОбобщенный</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоТоваров</dataPath>
+			<field>КоличествоТоваров</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество товаров</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоКМ</dataPath>
+			<field>КоличествоКМ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество КМ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОтсканированныхКМ</dataPath>
+			<field>КоличествоОтсканированныхКМ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество отсканированных КМ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТребуетсяМаркировка</dataPath>
+			<field>ТребуетсяМаркировка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Требуется маркировка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Артикул</dataPath>
+			<field>Артикул</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Артикул</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодПроизводителя</dataPath>
+			<field>КодПроизводителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код производителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВложенныйЗапрос.Номенклатура,
+	СУММА(ВложенныйЗапрос.КоличествоКМ) КАК КоличествоКМ,
+	СУММА(ВложенныйЗапрос.КоличествоОтсканированныхКМ) КАК КоличествоОтсканированныхКМ,
+	ВложенныйЗапрос.Ссылка
+ПОМЕСТИТЬ ВТ_КодыМаркировки
+ИЗ
+	(ВЫБРАТЬ
+		ПоступлениеТоваровУслугКодыМаркировки.КодМаркировки.Номенклатура КАК Номенклатура,
+		СУММА(0) КАК КоличествоТоваров,
+		СУММА(1) КАК КоличествоКМ,
+		СУММА(0) КАК КоличествоОтсканированныхКМ,
+		ПоступлениеТоваровУслугКодыМаркировки.Ссылка КАК Ссылка
+	ИЗ
+		Документ.ПоступлениеТоваровУслуг.КодыМаркировки КАК ПоступлениеТоваровУслугКодыМаркировки
+	ГДЕ
+		ПоступлениеТоваровУслугКодыМаркировки.Ссылка = &amp;ДокументПоступления
+	
+	СГРУППИРОВАТЬ ПО
+		ПоступлениеТоваровУслугКодыМаркировки.КодМаркировки.Номенклатура,
+		ПоступлениеТоваровУслугКодыМаркировки.Ссылка
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ПоступлениеТоваровУслугОтсканированныеКодыМаркировки.КодМаркировки.Номенклатура,
+		СУММА(0),
+		СУММА(0),
+		СУММА(1),
+		ПоступлениеТоваровУслугОтсканированныеКодыМаркировки.Ссылка
+	ИЗ
+		Документ.ПоступлениеТоваровУслуг.ОтсканированныеКодыМаркировки КАК ПоступлениеТоваровУслугОтсканированныеКодыМаркировки
+	ГДЕ
+		ПоступлениеТоваровУслугОтсканированныеКодыМаркировки.Ссылка = &amp;ДокументПоступления
+	
+	СГРУППИРОВАТЬ ПО
+		ПоступлениеТоваровУслугОтсканированныеКодыМаркировки.КодМаркировки.Номенклатура,
+		ПоступлениеТоваровУслугОтсканированныеКодыМаркировки.Ссылка) КАК ВложенныйЗапрос
+
+СГРУППИРОВАТЬ ПО
+	ВложенныйЗапрос.Номенклатура,
+	ВложенныйЗапрос.Ссылка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПоступлениеТоваровУслугТовары.Номенклатура КАК Номенклатура,
+	ПоступлениеТоваровУслугТовары.Количество КАК КоличествоТоваров,
+	0 КАК КоличествоКМ,
+	0 КАК КоличествоОтсканированныхКМ
+ПОМЕСТИТЬ ВТ_ИсходныеДанные
+ИЗ
+	Документ.ПоступлениеТоваровУслуг.Товары КАК ПоступлениеТоваровУслугТовары
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_КодыМаркировки КАК ВТ_КодыМаркировки
+		ПО ПоступлениеТоваровУслугТовары.Ссылка = ВТ_КодыМаркировки.Ссылка
+			И ПоступлениеТоваровУслугТовары.Номенклатура = ВТ_КодыМаркировки.Номенклатура
+ГДЕ
+	ПоступлениеТоваровУслугТовары.Ссылка = &amp;ДокументПоступления
+	И (НЕ ВТ_КодыМаркировки.Номенклатура ЕСТЬ NULL
+			ИЛИ ПоступлениеТоваровУслугТовары.Номенклатура.ТребуетсяМаркировка)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_КодыМаркировки.Номенклатура,
+	0,
+	ВТ_КодыМаркировки.КоличествоКМ,
+	ВТ_КодыМаркировки.КоличествоОтсканированныхКМ
+ИЗ
+	ВТ_КодыМаркировки КАК ВТ_КодыМаркировки
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_ИсходныеДанные.Номенклатура,
+	СУММА(ВТ_ИсходныеДанные.КоличествоТоваров) КАК КоличествоТоваров,
+	СУММА(ВТ_ИсходныеДанные.КоличествоКМ) КАК КоличествоКМ,
+	СУММА(ВТ_ИсходныеДанные.КоличествоОтсканированныхКМ) КАК КоличествоОтсканированныхКМ,
+	ВТ_ИсходныеДанные.Номенклатура.Артикул КАК Артикул,
+	ВТ_ИсходныеДанные.Номенклатура.КодПроизводителя КАК КодПроизводителя,
+	ВТ_ИсходныеДанные.Номенклатура.ТребуетсяМаркировка КАК ТребуетсяМаркировка
+ИЗ
+	ВТ_ИсходныеДанные КАК ВТ_ИсходныеДанные
+
+СГРУППИРОВАТЬ ПО
+	ВТ_ИсходныеДанные.Номенклатура,
+	ВТ_ИсходныеДанные.Номенклатура.Артикул,
+	ВТ_ИсходныеДанные.Номенклатура.КодПроизводителя,
+	ВТ_ИсходныеДанные.Номенклатура.ТребуетсяМаркировка</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанныхДетальный</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номенклатура</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодМаркировки</dataPath>
+			<field>КодМаркировки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОтсканированныйКодМаркировки</dataPath>
+			<field>ОтсканированныйКодМаркировки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отсканированный код маркировки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВЫБОР
+		КОГДА ЗапросКодыМаркировки.КодМаркировкиНоменклатура ЕСТЬ NULL
+			ТОГДА ЗапросОтсканированныеКодыМаркировки.КодМаркировкиНоменклатура
+		ИНАЧЕ ЗапросКодыМаркировки.КодМаркировкиНоменклатура
+	КОНЕЦ КАК Номенклатура,
+	ЕСТЬNULL(ЗапросКодыМаркировки.КодМаркировки, ЗНАЧЕНИЕ(Справочник.ШтрихкодыНоменклатуры.ПустаяСсылка)) КАК КодМаркировки,
+	ЕСТЬNULL(ЗапросОтсканированныеКодыМаркировки.КодМаркировки, ЗНАЧЕНИЕ(Справочник.ШтрихкодыНоменклатуры.ПустаяСсылка)) КАК ОтсканированныйКодМаркировки
+ИЗ
+	(ВЫБРАТЬ
+		ПоступлениеТоваровУслугКодыМаркировки.КодМаркировки.Номенклатура КАК КодМаркировкиНоменклатура,
+		ПоступлениеТоваровУслугКодыМаркировки.КодМаркировки КАК КодМаркировки
+	ИЗ
+		Документ.ПоступлениеТоваровУслуг.КодыМаркировки КАК ПоступлениеТоваровУслугКодыМаркировки
+	ГДЕ
+		ПоступлениеТоваровУслугКодыМаркировки.Ссылка = &amp;ДокументПоступления) КАК ЗапросКодыМаркировки
+		ПОЛНОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			ПоступлениеТоваровУслугОтсканированныеКодыМаркировки.КодМаркировки.Номенклатура КАК КодМаркировкиНоменклатура,
+			ПоступлениеТоваровУслугОтсканированныеКодыМаркировки.КодМаркировки КАК КодМаркировки
+		ИЗ
+			Документ.ПоступлениеТоваровУслуг.ОтсканированныеКодыМаркировки КАК ПоступлениеТоваровУслугОтсканированныеКодыМаркировки
+		ГДЕ
+			ПоступлениеТоваровУслугОтсканированныеКодыМаркировки.Ссылка = &amp;ДокументПоступления) КАК ЗапросОтсканированныеКодыМаркировки
+		ПО ЗапросКодыМаркировки.КодМаркировкиНоменклатура = ЗапросОтсканированныеКодыМаркировки.КодМаркировкиНоменклатура
+			И ЗапросКодыМаркировки.КодМаркировки = ЗапросОтсканированныеКодыМаркировки.КодМаркировки
+ГДЕ
+	ВЫБОР
+			КОГДА &amp;ПоказатьРазличия
+				ТОГДА НЕ ЕСТЬNULL(ЗапросКодыМаркировки.КодМаркировки, ЗНАЧЕНИЕ(Справочник.ШтрихкодыНоменклатуры.ПустаяСсылка)) = ЕСТЬNULL(ЗапросОтсканированныеКодыМаркировки.КодМаркировки, ЗНАЧЕНИЕ(Справочник.ШтрихкодыНоменклатуры.ПустаяСсылка))
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанныхОбобщенный</sourceDataSet>
+		<destinationDataSet>НаборДанныхДетальный</destinationDataSet>
+		<sourceExpression>Номенклатура</sourceExpression>
+		<destinationExpression>Номенклатура</destinationExpression>
+	</dataSetLink>
+	<parameter>
+		<name>ДокументПоступления</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Документ поступления</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef.ПоступлениеТоваровУслуг</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПоказатьРазличия</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Показать различия</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ДокументПоступления</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Артикул</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КодПроизводителя</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ТребуетсяМаркировка</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КоличествоТоваров</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КоличествоКМ</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>КоличествоОтсканированныхКМ</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоТоваров</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоКМ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КоличествоОтсканированныхКМ</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>ТребуетсяМаркировка</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">ТребуетсяМаркировка</dcsset:left>
+								<dcsset:comparisonType>Equal</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">#FFCC99</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>КоличествоКМ</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemGroup">
+								<dcsset:groupType>OrGroup</dcsset:groupType>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">КоличествоТоваров</dcsset:left>
+									<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">КоличествоКМ</dcsset:right>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">#FFCC99</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>КоличествоОтсканированныхКМ</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemGroup">
+								<dcsset:groupType>OrGroup</dcsset:groupType>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">КоличествоТоваров</dcsset:left>
+									<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">КоличествоОтсканированныхКМ</dcsset:right>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">#FFCC99</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:use>false</dcsset:use>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>КоличествоКМ</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>КоличествоОтсканированныхКМ</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemGroup">
+								<dcsset:groupType>OrGroup</dcsset:groupType>
+								<dcsset:item xsi:type="dcsset:FilterItemComparison">
+									<dcsset:left xsi:type="dcscor:Field">КоличествоКМ</dcsset:left>
+									<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+									<dcsset:right xsi:type="dcscor:Field">КоличествоОтсканированныхКМ</dcsset:right>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">#FFCC99</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>КодМаркировки</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ОтсканированныйКодМаркировки</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

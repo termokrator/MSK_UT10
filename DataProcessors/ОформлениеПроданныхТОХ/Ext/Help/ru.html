@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link></head><body>
+<h1 class=""><font color="#000040">«</font>Отчет по остаткам ТОХ<font color="#000040">»</font></h1>
+
+<div><br></div>
+Отчет формируется по номенклатуре поставщика ТОХ, выбранного в обработке. 
+<p class="Usual">В столбцах представлены данные:</p> 
+<p class="Usual"><u>По рассчитанному в обработке выкупу:</u></p>
+<ul><li>
+<div class="">Количество выкупа</div>
+</li>
+</ul><p class="Usual">Количество выкупа заполняется в случае, если проставлена галка в поле-флажка</p> 
+<p class="Usual"><u>По 5 регистрам:</u></p>
+<ul><li>
+<div class="">Склад остаток</div>
+</li>
+</ul><ul><li>
+<div class="">МТ остаток + КоличествоВыкупа</div>
+</li>
+</ul><ul><li>
+<div class="">ТОХ остаток</div>
+</li>
+</ul><ul><li>
+<div class="">ТОХ Переданные остаток</div>
+</li>
+</ul><ul><li>
+<div class="">ТОХ Поставщиков остаток – КоличествоВыкупа</div>
+</li>
+</ul><p class="Usual"></p>
+<div class="Usual"><u>По метрикам ТОХ №1-3 и 5:</u>
+<p></p>
+<p class=""><strong>Метрика 1</strong>  = "Товары организаций (МТ)" + "КоличествоВыкупа"</p>
+<p class="">Нормальные значения: ≥ 0</p>
+<p class=""><strong>Метрика 2</strong> = "Товары на складах" - "Товары организаций (МТ)" – "ТОХ поставщика" + "ТОХ переданные в филиал"</p>
+<p class="">Нормальные значения: 0</p>
+<p class=""><strong>Метрика 3</strong>  = "ТОХ поставщика” – "ТОХ" – “КоличествоВыкупа"</p>
+<p class="">Нормальные значения: 0</p>
+<p class=""><strong>Метрика 5</strong>  = "ТОХ" – "ТОХ переданные в филиал"</p>
+<p class="">Нормальные значения: ≥ 0</p>
+</div></body></html>

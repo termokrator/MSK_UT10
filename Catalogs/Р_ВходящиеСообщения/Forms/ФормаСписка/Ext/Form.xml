@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОбработатьВыделенныеСтроки" id="56">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОбработатьВыделенныеСтроки</CommandName>
+				<ExtendedTooltip name="ОбработатьВыделенныеСтрокиРасширеннаяПодсказка" id="57"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<HeaderHeight>2</HeaderHeight>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialListView>End</InitialListView>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<CheckBoxField name="Обработано" id="67">
+					<DataPath>Список.Обработано</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбработаноКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ОбработаноРасширеннаяПодсказка" id="69"/>
+				</CheckBoxField>
+				<LabelField name="Дата" id="50">
+					<DataPath>Список.Дата</DataPath>
+					<Width>30</Width>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="52"/>
+				</LabelField>
+				<LabelField name="Код" id="116">
+					<DataPath>Список.Код</DataPath>
+					<ContextMenu name="КодКонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="118"/>
+				</LabelField>
+				<LabelField name="КодИсточника" id="119">
+					<DataPath>Список.КодИсточника</DataPath>
+					<ContextMenu name="КодИсточникаКонтекстноеМеню" id="120"/>
+					<ExtendedTooltip name="КодИсточникаРасширеннаяПодсказка" id="121"/>
+				</LabelField>
+				<LabelField name="Наименование" id="113">
+					<DataPath>Список.Наименование</DataPath>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="115"/>
+				</LabelField>
+				<LabelField name="НомерПоПорядку" id="53">
+					<DataPath>Список.НомерПоПорядку</DataPath>
+					<ContextMenu name="НомерПоПорядкуКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="НомерПоПорядкуРасширеннаяПодсказка" id="55"/>
+				</LabelField>
+				<LabelField name="Подписка" id="37">
+					<DataPath>Список.Подписка</DataPath>
+					<Width>30</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ПодпискаКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ПодпискаРасширеннаяПодсказка" id="39"/>
+				</LabelField>
+				<LabelField name="ТипСообщения" id="40">
+					<DataPath>Список.ТипСообщения</DataPath>
+					<ContextMenu name="ТипСообщенияКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="ТипСообщенияРасширеннаяПодсказка" id="42"/>
+				</LabelField>
+				<LabelField name="ИмяОбъектаМетаданных" id="104">
+					<DataPath>Список.ИмяОбъектаМетаданных</DataPath>
+					<ContextMenu name="ИмяОбъектаМетаданныхКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="ИмяОбъектаМетаданныхРасширеннаяПодсказка" id="106"/>
+				</LabelField>
+				<LabelField name="ИмяПриложения" id="107">
+					<DataPath>Список.ИмяПриложения</DataPath>
+					<ContextMenu name="ИмяПриложенияКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="ИмяПриложенияРасширеннаяПодсказка" id="109"/>
+				</LabelField>
+				<CheckBoxField name="ОбработаноСОшибкой" id="28">
+					<DataPath>Список.ОбработаноСОшибкой</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибка</v8:content>
+						</v8:item>
+					</Title>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОбработаноСОшибкойКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ОбработаноСОшибкойРасширеннаяПодсказка" id="30"/>
+				</CheckBoxField>
+				<LabelField name="КоличествоПопытокПовторнойОбработки" id="97">
+					<DataPath>Список.КоличествоПопытокПовторнойОбработки</DataPath>
+					<Width>4</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="КоличествоПопытокПовторнойОбработкиКонтекстноеМеню" id="98"/>
+					<ExtendedTooltip name="КоличествоПопытокПовторнойОбработкиРасширеннаяПодсказка" id="99"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="110">
+					<DataPath>Список.Ссылка</DataPath>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="112"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникР_ВходящиеСообщения.Ссылка КАК Ссылка,
+	СправочникР_ВходящиеСообщения.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникР_ВходящиеСообщения.Код КАК Код,
+	СправочникР_ВходящиеСообщения.Наименование КАК Наименование,
+	СправочникР_ВходящиеСообщения.Данные КАК Данные,
+	СправочникР_ВходящиеСообщения.ТекстОшибки КАК ТекстОшибки,
+	СправочникР_ВходящиеСообщения.ОбработаноСОшибкой КАК ОбработаноСОшибкой,
+	СправочникР_ВходящиеСообщения.ПредставлениеЗагруженныхДанных КАК ПредставлениеЗагруженныхДанных,
+	СправочникР_ВходящиеСообщения.КоличествоПопытокПовторнойОбработки КАК КоличествоПопытокПовторнойОбработки,
+	СправочникР_ВходящиеСообщения.Обработано КАК Обработано,
+	СправочникР_ВходящиеСообщения.ТипСообщения КАК ТипСообщения,
+	СправочникР_ВходящиеСообщения.Дата КАК Дата,
+	СправочникР_ВходящиеСообщения.Подписка КАК Подписка,
+	СправочникР_ВходящиеСообщения.ИмяОбъектаМетаданных КАК ИмяОбъектаМетаданных,
+	СправочникР_ВходящиеСообщения.НомерПоПорядку КАК НомерПоПорядку,
+	СправочникР_ВходящиеСообщения.КодПотока КАК КодПотока,
+	СправочникР_ВходящиеСообщения.ИмяПриложения КАК ИмяПриложения,
+	СправочникР_ВходящиеСообщения.КодИсточника КАК КодИсточника,
+	СправочникР_ВходящиеСообщения.Параметры.(
+		Ссылка КАК Ссылка,
+		НомерСтроки КАК НомерСтроки,
+		Имя КАК Имя,
+		Значение КАК Значение
+	) КАК Параметры,
+	СправочникР_ВходящиеСообщения.Предопределенный КАК Предопределенный
+ИЗ
+	Справочник.Р_ВходящиеСообщения КАК СправочникР_ВходящиеСообщения
+ГДЕ
+	(&amp;КодИсточника = НЕОПРЕДЕЛЕНО
+			ИЛИ СправочникР_ВходящиеСообщения.КодИсточника = &amp;КодИсточника)</QueryText>
+				<MainTable>Catalog.Р_ВходящиеСообщения</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Дата</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбработатьВыделенныеСтроки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обработать выделенные строки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Будет повторно обработано даже уже обработанное сообщение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбработатьВыделенныеСтроки</Action>
+		</Command>
+	</Commands>
+</Form>

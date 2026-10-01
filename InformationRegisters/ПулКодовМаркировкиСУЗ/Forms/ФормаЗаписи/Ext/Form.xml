@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ДокументОснование" id="1">
+			<DataPath>Запись.ДокументОснование</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ЗаказНаЭмиссию" id="4">
+			<DataPath>Запись.ЗаказНаЭмиссию</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ЗаказНаЭмиссиюКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ЗаказНаЭмиссиюРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="КодМаркировки" id="7">
+			<DataPath>Запись.КодМаркировки</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КодМаркировкиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КодМаркировкиРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ХешСуммаКодаМаркировки" id="10">
+			<DataPath>Запись.ХешСуммаКодаМаркировки</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ХешСуммаКодаМаркировкиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ХешСуммаКодаМаркировкиРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Статус" id="13">
+			<DataPath>Запись.Статус</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СтатусКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Организация" id="16">
+			<DataPath>Запись.Организация</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="СтанцияУправленияЗаказами" id="19">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СтанцияУправленияЗаказамиКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СтанцияУправленияЗаказамиРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="Номенклатура" id="22">
+			<DataPath>Запись.Номенклатура</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="НоменклатураКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="НоменклатураРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Характеристика" id="25">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ХарактеристикаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ХарактеристикаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ПолныйКодМаркировки" id="28">
+			<DataPath>Запись.ПолныйКодМаркировки</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ПолныйКодМаркировкиКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ПолныйКодМаркировкиРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="ДатаЭмиссииУниверсальная" id="31">
+			<DataPath>Запись.ДатаЭмиссииУниверсальная</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаЭмиссииУниверсальнаяКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ДатаЭмиссииУниверсальнаяРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="ДатаПечатиУниверсальная" id="34">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаПечатиУниверсальнаяКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ДатаПечатиУниверсальнаяРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="ШтрихкодУпаковки" id="37">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ШтрихкодУпаковкиКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ШтрихкодУпаковкиРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="GTIN" id="40">
+			<DataPath>Запись.GTIN</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="GTINКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="GTINРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="ВидПродукции" id="43">
+			<DataPath>Запись.ВидПродукции</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВидПродукцииКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ВидПродукцииРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<InputField name="МаксимальнаяРозничнаяЦена" id="46">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="МаксимальнаяРозничнаяЦенаКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="МаксимальнаяРозничнаяЦенаРасширеннаяПодсказка" id="48"/>
+		</InputField>
+		<InputField name="СпособВводаВОборот" id="49">
+			<DataPath>Запись.СпособВводаВОборот</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СпособВводаВОборотКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="СпособВводаВОборотРасширеннаяПодсказка" id="51"/>
+		</InputField>
+		<InputField name="Шаблон" id="52">
+			<DataPath>Запись.Шаблон</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ШаблонКонтекстноеМеню" id="53"/>
+			<ExtendedTooltip name="ШаблонРасширеннаяПодсказка" id="54"/>
+		</InputField>
+		<InputField name="ХешСуммаУпаковки" id="55">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ХешСуммаУпаковкиКонтекстноеМеню" id="56"/>
+			<ExtendedTooltip name="ХешСуммаУпаковкиРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<InputField name="ТипШтрихкода" id="58">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ТипШтрихкодаКонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="ТипШтрихкодаРасширеннаяПодсказка" id="60"/>
+		</InputField>
+		<CheckBoxField name="МаркировкаОстатков" id="61">
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="МаркировкаОстатковКонтекстноеМеню" id="62"/>
+			<ExtendedTooltip name="МаркировкаОстатковРасширеннаяПодсказка" id="63"/>
+		</CheckBoxField>
+		<InputField name="СрокГодности" id="64">
+			<DataPath>Запись.СрокГодности</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="СрокГодностиКонтекстноеМеню" id="65"/>
+			<ExtendedTooltip name="СрокГодностиРасширеннаяПодсказка" id="66"/>
+		</InputField>
+		<InputField name="ИдентификаторЗаказаСУЗ" id="67">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИдентификаторЗаказаСУЗКонтекстноеМеню" id="68"/>
+			<ExtendedTooltip name="ИдентификаторЗаказаСУЗРасширеннаяПодсказка" id="69"/>
+		</InputField>
+		<InputField name="ИдентификаторБлокаСУЗ" id="70">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ИдентификаторБлокаСУЗКонтекстноеМеню" id="71"/>
+			<ExtendedTooltip name="ИдентификаторБлокаСУЗРасширеннаяПодсказка" id="72"/>
+		</InputField>
+		<InputField name="ВидКИЗ" id="73">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ВидКИЗКонтекстноеМеню" id="74"/>
+			<ExtendedTooltip name="ВидКИЗРасширеннаяПодсказка" id="75"/>
+		</InputField>
+		<InputField name="РазмерКИЗ" id="76">
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РазмерКИЗКонтекстноеМеню" id="77"/>
+			<ExtendedTooltip name="РазмерКИЗРасширеннаяПодсказка" id="78"/>
+		</InputField>
+		<TextDocumentField name="ТекстОшибки" id="79">
+			<DataPath>Запись.ТекстОшибки</DataPath>
+			<ContextMenu name="ТекстОшибкиКонтекстноеМеню" id="80"/>
+			<ExtendedTooltip name="ТекстОшибкиРасширеннаяПодсказка" id="81"/>
+		</TextDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПулКодовМаркировкиСУЗ</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСохранитьТаблицуСопоставления" id="20">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СохранитьТаблицуСопоставления</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьТаблицуСопоставленияРасширеннаяПодсказка" id="21"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Организация" id="25">
+			<DataPath>Объект.Организация</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация, по которой отображается список сопоставленной номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<Table name="ТаблицаСопоставления" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаСопоставления</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаСопоставленияКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТаблицаСопоставленияКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ТаблицаСопоставленияРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ТаблицаСопоставленияСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ТаблицаСопоставления</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСопоставленияСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ТаблицаСопоставленияСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаСопоставленияСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ТаблицаСопоставления</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСопоставленияСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ТаблицаСопоставленияСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаСопоставленияУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ТаблицаСопоставления</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаСопоставленияУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаСопоставленияУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблицаСопоставленияПоставщик" id="22">
+					<DataPath>ТаблицаСопоставления.Поставщик</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ТаблицаСопоставленияПоставщикКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ТаблицаСопоставленияПоставщикРасширеннаяПодсказка" id="24"/>
+				</InputField>
+				<InputField name="ТаблицаСопоставленияВнешняяНоменклатура" id="14">
+					<DataPath>ТаблицаСопоставления.ВнешняяНоменклатура</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура поставщика</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ТаблицаСопоставленияВнешняяНоменклатураКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ТаблицаСопоставленияВнешняяНоменклатураРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ТаблицаСопоставленияНоменклатура" id="17">
+					<DataPath>ТаблицаСопоставления.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ТаблицаСопоставленияНоменклатураКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ТаблицаСопоставленияНоменклатураРасширеннаяПодсказка" id="19"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<LabelDecoration name="УведомлениеОПроверке" id="50">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Необходимо заполнить таблицу сопоставляемой номенклатуры и убедиться в корректности заполнения таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="УведомлениеОПроверкеКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="УведомлениеОПроверкеРасширеннаяПодсказка" id="52"/>
+		</LabelDecoration>
+		<Table name="СопоставляемаяНоменклатура" id="28">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>СопоставляемаяНоменклатура</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СопоставляемаяНоменклатураКонтекстноеМеню" id="29"/>
+			<AutoCommandBar name="СопоставляемаяНоменклатураКоманднаяПанель" id="30"/>
+			<ExtendedTooltip name="СопоставляемаяНоменклатураРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="СопоставляемаяНоменклатураСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>СопоставляемаяНоменклатура</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СопоставляемаяНоменклатураСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="СопоставляемаяНоменклатураСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СопоставляемаяНоменклатураСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>СопоставляемаяНоменклатура</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СопоставляемаяНоменклатураСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="СопоставляемаяНоменклатураСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СопоставляемаяНоменклатураУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>СопоставляемаяНоменклатура</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СопоставляемаяНоменклатураУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="СопоставляемаяНоменклатураУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="СопоставляемаяНоменклатураПоставщик" id="47">
+					<DataPath>СопоставляемаяНоменклатура.Поставщик</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СопоставляемаяНоменклатураПоставщикКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СопоставляемаяНоменклатураПоставщикРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="СопоставляемаяНоменклатураВнешняяНоменклатура" id="41">
+					<DataPath>СопоставляемаяНоменклатура.ВнешняяНоменклатура</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СопоставляемаяНоменклатураВнешняяНоменклатураКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="СопоставляемаяНоменклатураВнешняяНоменклатураРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="СопоставляемаяНоменклатураНоменклатура" id="44">
+					<DataPath>СопоставляемаяНоменклатура.Номенклатура</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СопоставляемаяНоменклатураНоменклатураКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="СопоставляемаяНоменклатураНоменклатураРасширеннаяПодсказка" id="46"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.МодульИнтеграцииDiState</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаСопоставления" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица сопоставления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВнешняяНоменклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внешняя номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Поставщик" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СопоставляемаяНоменклатура" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставляемая номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВнешняяНоменклатура" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внешняя номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Номенклатура" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номенклатура</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Номенклатура</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Поставщик" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поставщик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СопоставлениеПриЗагрузке" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставление при загрузке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьТаблицуСопоставления" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить таблицу сопоставления</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить таблицу сопоставления</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьТаблицуСопоставления</Action>
+		</Command>
+	</Commands>
+</Form>

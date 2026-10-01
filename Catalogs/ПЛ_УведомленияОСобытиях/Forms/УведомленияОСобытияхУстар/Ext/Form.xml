@@ -1,0 +1,721 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>CancelSearch</ExcludedCommand>
+		<ExcludedCommand>Change</ExcludedCommand>
+		<ExcludedCommand>Copy</ExcludedCommand>
+		<ExcludedCommand>Create</ExcludedCommand>
+		<ExcludedCommand>Delete</ExcludedCommand>
+		<ExcludedCommand>Find</ExcludedCommand>
+		<ExcludedCommand>ListSettings</ExcludedCommand>
+		<ExcludedCommand>OutputList</ExcludedCommand>
+		<ExcludedCommand>Refresh</ExcludedCommand>
+		<ExcludedCommand>SetDeletionMark</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаУведомленияИСобытия" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа уведомления и события</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа уведомления и события</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ChildItemsWidth>LeftNarrowest</ChildItemsWidth>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУведомленияИСобытияРасширеннаяПодсказка" id="186"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСобытия" id="49">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>События</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа события</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаСобытияРасширеннаяПодсказка" id="187"/>
+					<ChildItems>
+						<Table name="События" id="28">
+							<Representation>Tree</Representation>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>События</DataPath>
+							<RowPictureDataPath>События.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Choose</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>ListSettings</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>Refresh</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СобытияКонтекстноеМеню" id="29"/>
+							<AutoCommandBar name="СобытияКоманднаяПанель" id="30">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="СобытияСоздать" id="69">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.События.StandardCommand.Create</CommandName>
+										<ExtendedTooltip name="СобытияСоздатьРасширеннаяПодсказка" id="188"/>
+									</Button>
+									<Button name="СобытияСоздатьГруппу" id="70">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.События.StandardCommand.CreateFolder</CommandName>
+										<ExtendedTooltip name="СобытияСоздатьГруппуРасширеннаяПодсказка" id="189"/>
+									</Button>
+									<Button name="СобытияИзменить" id="71">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.События.StandardCommand.Change</CommandName>
+										<ExtendedTooltip name="СобытияИзменитьРасширеннаяПодсказка" id="190"/>
+									</Button>
+									<Button name="СобытияСкопировать" id="72">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.События.StandardCommand.Copy</CommandName>
+										<ExtendedTooltip name="СобытияСкопироватьРасширеннаяПодсказка" id="191"/>
+									</Button>
+									<Button name="СобытияУстановитьПометкуУдаления" id="73">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Item.События.StandardCommand.SetDeletionMark</CommandName>
+										<ExtendedTooltip name="СобытияУстановитьПометкуУдаленияРасширеннаяПодсказка" id="192"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СобытияРасширеннаяПодсказка" id="193"/>
+							<SearchStringAddition name="СобытияСтрокаПоиска" id="194">
+								<AdditionSource>
+									<Item>События</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СобытияСтрокаПоискаКонтекстноеМеню" id="195"/>
+								<ExtendedTooltip name="СобытияСтрокаПоискаРасширеннаяПодсказка" id="196"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СобытияСостояниеПросмотра" id="197">
+								<AdditionSource>
+									<Item>События</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СобытияСостояниеПросмотраКонтекстноеМеню" id="198"/>
+								<ExtendedTooltip name="СобытияСостояниеПросмотраРасширеннаяПодсказка" id="199"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СобытияУправлениеПоиском" id="200">
+								<AdditionSource>
+									<Item>События</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СобытияУправлениеПоискомКонтекстноеМеню" id="201"/>
+								<ExtendedTooltip name="СобытияУправлениеПоискомРасширеннаяПодсказка" id="202"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">СобытияПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<CheckBoxField name="СобытияАктивно" id="50">
+									<DataPath>События.Активно</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Вкл.</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СобытияАктивноКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="СобытияАктивноРасширеннаяПодсказка" id="203"/>
+								</CheckBoxField>
+								<LabelField name="СобытияНаименование" id="52">
+									<DataPath>События.Description</DataPath>
+									<ContextMenu name="СобытияНаименованиеКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="СобытияНаименованиеРасширеннаяПодсказка" id="204"/>
+								</LabelField>
+								<LabelField name="СобытияИсточник" id="132">
+									<DataPath>События.Источник</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Источник события</v8:content>
+										</v8:item>
+									</Title>
+									<Width>20</Width>
+									<ContextMenu name="СобытияИсточникКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="СобытияИсточникРасширеннаяПодсказка" id="205"/>
+								</LabelField>
+								<LabelField name="СобытияКоличествоУведомлений" id="74">
+									<DataPath>События.КоличествоУведомлений</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уведомлений</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Количество уведомлений</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<Width>5</Width>
+									<ContextMenu name="СобытияКоличествоУведомленийКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="СобытияКоличествоУведомленийРасширеннаяПодсказка" id="206"/>
+								</LabelField>
+								<LabelField name="СобытияСсылка" id="77">
+									<DataPath>События.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СобытияСсылкаКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="СобытияСсылкаРасширеннаяПодсказка" id="207"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаУведомления" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уведомления</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа уведомления</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаУведомленияРасширеннаяПодсказка" id="208"/>
+					<ChildItems>
+						<Table name="Уведомления" id="58">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>Уведомления</DataPath>
+							<RowPictureDataPath>Уведомления.DefaultPicture</RowPictureDataPath>
+							<CommandSet>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>None</SearchStringLocation>
+							<ViewStatusLocation>None</ViewStatusLocation>
+							<SearchControlLocation>None</SearchControlLocation>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="УведомленияКонтекстноеМеню" id="59"/>
+							<AutoCommandBar name="УведомленияКоманднаяПанель" id="60">
+								<ChildItems>
+									<Button name="УведомленияОтборУведомленийПоСобытию" id="76">
+										<Type>CommandBarButton</Type>
+										<Check>true</Check>
+										<CommandName>Form.Command.ОтборУведомленийПоСобытию</CommandName>
+										<ExtendedTooltip name="УведомленияОтборУведомленийПоСобытиюРасширеннаяПодсказка" id="209"/>
+									</Button>
+									<ButtonGroup name="УведомленияГруппаКомандыФормы" id="68">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Уведомления группа команды формы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Уведомления группа команды формы</v8:content>
+											</v8:item>
+										</ToolTip>
+										<CommandSource>Form</CommandSource>
+										<ExtendedTooltip name="УведомленияГруппаКомандыФормыРасширеннаяПодсказка" id="210"/>
+									</ButtonGroup>
+									<Button name="УведомленияСправка" id="67">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="УведомленияСправкаРасширеннаяПодсказка" id="211"/>
+									</Button>
+									<ButtonGroup name="УведомленияГруппаНастройки" id="104">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Уведомления группа настройки</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Уведомления группа настройки</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="УведомленияГруппаНастройкиРасширеннаяПодсказка" id="212"/>
+										<ChildItems>
+											<Button name="УведомленияНастройки" id="102">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.Настройки</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="УведомленияНастройкиРасширеннаяПодсказка" id="213"/>
+											</Button>
+											<Button name="УведомленияПерейтиВНовуюФорму" id="236">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПерейтиВНовуюФорму</CommandName>
+												<TextColor>web:Black</TextColor>
+												<ExtendedTooltip name="УведомленияПерейтиВНовуюФормуРасширеннаяПодсказка" id="237"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="УведомленияИсторияВерсий" id="130">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИсторияВерсий</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="УведомленияИсторияВерсийРасширеннаяПодсказка" id="214"/>
+									</Button>
+									<Button name="УведомленияОПрограмме" id="105">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ОПрограмме</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="УведомленияОПрограммеРасширеннаяПодсказка" id="215"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="УведомленияРасширеннаяПодсказка" id="216"/>
+							<SearchStringAddition name="УведомленияСтрокаПоиска" id="217">
+								<AdditionSource>
+									<Item>Уведомления</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УведомленияСтрокаПоискаКонтекстноеМеню" id="218"/>
+								<ExtendedTooltip name="УведомленияСтрокаПоискаРасширеннаяПодсказка" id="219"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="УведомленияСостояниеПросмотра" id="220">
+								<AdditionSource>
+									<Item>Уведомления</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="УведомленияСостояниеПросмотраКонтекстноеМеню" id="221"/>
+								<ExtendedTooltip name="УведомленияСостояниеПросмотраРасширеннаяПодсказка" id="222"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="УведомленияУправлениеПоиском" id="223">
+								<AdditionSource>
+									<Item>Уведомления</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="УведомленияУправлениеПоискомКонтекстноеМеню" id="224"/>
+								<ExtendedTooltip name="УведомленияУправлениеПоискомРасширеннаяПодсказка" id="225"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">УведомленияПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="Событие" id="63">
+									<DataPath>Уведомления.Событие</DataPath>
+									<ContextMenu name="СобытиеКонтекстноеМеню" id="64"/>
+									<ExtendedTooltip name="СобытиеРасширеннаяПодсказка" id="226"/>
+								</LabelField>
+								<LabelField name="Наименование" id="61">
+									<DataPath>Уведомления.Description</DataPath>
+									<ContextMenu name="НаименованиеКонтекстноеМеню" id="62"/>
+									<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="227"/>
+								</LabelField>
+								<LabelField name="СписокПолучателей" id="65">
+									<DataPath>Уведомления.СписокПолучателей</DataPath>
+									<ContextMenu name="СписокПолучателейКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="СписокПолучателейРасширеннаяПодсказка" id="228"/>
+								</LabelField>
+								<CheckBoxField name="ЭлПочта" id="181">
+									<DataPath>Уведомления.ЭлПочта</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Email</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЭлПочтаКонтекстноеМеню" id="182"/>
+									<ExtendedTooltip name="ЭлПочтаРасширеннаяПодсказка" id="229"/>
+								</CheckBoxField>
+								<CheckBoxField name="СервисПочтовойРассылки" id="233">
+									<DataPath>Уведомления.СервисПочтовойРассылки</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сервис Email</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СервисПочтовойРассылкиКонтекстноеМеню" id="234"/>
+									<ExtendedTooltip name="СервисПочтовойРассылкиРасширеннаяПодсказка" id="235"/>
+								</CheckBoxField>
+								<CheckBoxField name="СМС" id="178">
+									<DataPath>Уведомления.СМС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>SMS</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СМСКонтекстноеМеню" id="179"/>
+									<ExtendedTooltip name="СМСРасширеннаяПодсказка" id="230"/>
+								</CheckBoxField>
+								<CheckBoxField name="Напоминание" id="184">
+									<DataPath>Уведомления.Напоминание</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="НапоминаниеКонтекстноеМеню" id="185"/>
+									<ExtendedTooltip name="НапоминаниеРасширеннаяПодсказка" id="231"/>
+								</CheckBoxField>
+								<LabelField name="Ссылка" id="79">
+									<DataPath>Уведомления.Ref</DataPath>
+									<UserVisible>
+										<xr:Common>false</xr:Common>
+									</UserVisible>
+									<ContextMenu name="СсылкаКонтекстноеМеню" id="80"/>
+									<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="232"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Уведомления" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомления</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Уведомления.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.ПЛ_УведомленияОСобытиях</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="События" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>События</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>События.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	События.Ссылка,
+	События.Наименование,
+	События.УдалитьАктивно КАК Активно,
+	ВЫБОР
+		КОГДА События.ИсточникСобытия = ЗНАЧЕНИЕ(Перечисление.ПЛ_ИсточникиСобытий.РегламентнаяПроверка) ТОГДА
+			&amp;СтрокаПоРасписанию
+		КОГДА События.ИсточникСобытия = ЗНАЧЕНИЕ(Перечисление.ПЛ_ИсточникиСобытий.Рассылка) ТОГДА
+			&amp;СтрокаРассылка
+		ИНАЧЕ
+			События.ПредставлениеРегистратора
+	КОНЕЦ КАК Источник,
+	КОЛИЧЕСТВО(Уведомления.Ссылка) КАК КоличествоУведомлений
+ИЗ
+	Справочник.ПЛ_События КАК События
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.ПЛ_УведомленияОСобытиях КАК Уведомления
+		ПО События.Ссылка = Уведомления.Событие
+
+СГРУППИРОВАТЬ ПО
+	События.Ссылка,
+	События.Наименование,
+	События.УдалитьАктивно</QueryText>
+				<MainTable>Catalog.ПЛ_События</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ОтборУведомленийПоСобытию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор уведомлений по событию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПустоеСобытие" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пустое событие</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПЛ_События</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьИзменениеВерсии" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть изменение версии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПервыйЗапуск" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это первый запуск</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВесПредыдущейВерсии" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес предыдущей версии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяВерсия" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая версия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Платформа83" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платформа83</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОтборУведомленийПоСобытию" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор по событию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор уведомлений по событию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.FilterByCurrentValue</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаОтборУведомленийПоСобытию</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкиУведомлений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки уведомлений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки уведомлений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Настройки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПЛ_Настройка</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Настройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОПрограмме" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>О подсистеме "Уведомления о событиях"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>О программе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОПрограмме</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИсторияВерсий" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История версий</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История версий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсторияВерсий</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПерейтиВНовуюФорму" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый интерфейс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти в новую форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиВНовуюФорму</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

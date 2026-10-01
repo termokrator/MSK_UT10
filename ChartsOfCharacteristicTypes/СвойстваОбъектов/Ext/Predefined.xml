@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.20">
+	<Item id="e94bfd74-9e35-4bc9-8bcc-af8d1d65106b">
+		<Name>IDИнвойса</Name>
+		<Code>900000022</Code>
+		<Description>ID Инвойса</Description>
+		<Type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>36</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6eca2210-b066-422d-9316-95e4da18f158">
+		<Name>АвтоматическиСозданКорПТУВСторБазе</Name>
+		<Code>900000023</Code>
+		<Description>Автоматически создан КорПТУ в стор базе</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="0c8969e2-6217-4302-9150-baa51706b285">
+		<Name>ВремяПередачи</Name>
+		<Code>900000005</Code>
+		<Description>Время передачи</Description>
+		<Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6109542f-87e8-4d14-b094-d74a9ec0c0eb">
+		<Name>ВремяПоступления</Name>
+		<Code>900000020</Code>
+		<Description>Время поступления</Description>
+		<Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="5cdbcce4-b419-47b4-bc80-cc1273d35ae8">
+		<Name>ДатаИВремяЗакрытия</Name>
+		<Code>900000021</Code>
+		<Description>Дата и время закрытия</Description>
+		<Type>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e07e5100-62fc-4e34-8b40-19282198b222">
+		<Name>ДокументОтправленЧерезЭДО</Name>
+		<Code>900000006</Code>
+		<Description>Документ отправлен через ЭДО</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="bee3755b-9911-49e9-a2a7-e2e53753ab6e">
+		<Name>ЗаблокированоДляОплаты</Name>
+		<Code>900000016</Code>
+		<Description>Заблокировано для оплаты</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="13d36cae-5772-4bed-bc99-6e7ff0991709">
+		<Name>ЗаказОтправленПоставщику</Name>
+		<Code>900000015</Code>
+		<Description>Заказ отправлен поставщику</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="daadc403-1332-4ff3-8b0b-16800bfaf15c">
+		<Name>КоличествоСтрок</Name>
+		<Code>900000002</Code>
+		<Description>Количество строк</Description>
+		<Type>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>10</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="e8ca7ede-c778-4e47-a2c3-efdf51a2cc0c">
+		<Name>ОтправленоПоЭлПочте</Name>
+		<Code>900000012</Code>
+		<Description>Отправлено по эл почте</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="7700d4b8-c5ec-4709-b70b-5b6243ec458a">
+		<Name>ПечататьКлиентуКвитанциюПКО</Name>
+		<Code>900000008</Code>
+		<Description>Печатать клиенту квитанции ПКО</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3d1b389a-b640-46de-b352-76f7900033f5">
+		<Name>Распечатано</Name>
+		<Code>900000009</Code>
+		<Description>Распечатано</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="55fb7e03-46d3-4121-ac2b-703ee0d65a10">
+		<Name>СостояниеЭДО</Name>
+		<Code>900000017</Code>
+		<Description>Состояние ЭДО</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СостояниеЭДО</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="6eb77df6-851c-481f-9172-ee43dfa548ad">
+		<Name>СтатусВыполнения</Name>
+		<Code>900000004</Code>
+		<Description>Статус выполнения</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыВыполнения</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2116eb63-8975-44ae-ad4a-c82244ffc0bb">
+		<Name>СтатусДоставки</Name>
+		<Code>900000003</Code>
+		<Description>Статус доставки</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыДоставки</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8f42a73b-911b-4912-ab64-80b193c2d053">
+		<Name>СтатусПодтвержденияЭДОПТУ</Name>
+		<Code>900000025</Code>
+		<Description>Статус подтверждения ЭДО для ПТУ</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыПодтвержденияЭДОПТУ</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="53078846-6a8f-4d72-aeca-826477661462">
+		<Name>СтатусПриемки</Name>
+		<Code>900000001</Code>
+		<Description>Статус приемки</Description>
+		<Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.СтатусыПриемки</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="eaf5b701-25ba-4e09-8d51-6e739e0b4e73">
+		<Name>ТоварПередан</Name>
+		<Code>900000024</Code>
+		<Description>Товар передан</Description>
+		<Type>
+			<v8:Type>xs:boolean</v8:Type>
+		</Type>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

@@ -1,0 +1,62 @@
+﻿{
+  "__version": "6.3",
+  "__object": "",
+  "document": {
+    "economicSubjectName": "ФОД_ПолучитьИмяСоставителяСФ()",
+    "basis": null,
+    "governmentContract": null,
+    "factActivity4": {
+      "operationType": "Принятие",
+      "receiving": {
+        "operationInformation": null,
+        "date": "ФОД_ПолучитьТекущуюДату()",
+        "operationCode": {
+          "code": "1",
+          "contradictionName": null,
+          "contradictionKind": null,
+          "contradictionNumber": null,
+          "contradictionDate": null,
+          "contradictionUid": null
+        },
+        "receivedBy": {
+          	"__object": "ФОД_ПолучитьФизЛицоОтправителя()",
+			"type": "employee",
+			"fio": {
+				"surname": "ФОД_ПолучитьФамилиюФизЛица()",
+  				"name": "ФОД_ПолучитьИмяФизЛица()",
+  				"patronymic": "ФОД_ПолучитьОтчествоФизЛица()"
+			},
+			"position": "ФОД_ПолучитьДолжностьФизЛица()",
+          	"information": null,
+          	"assigneeBasis": "ФОД_ПолучитьОснованиеПолномочийФизЛица()"
+        }
+      },
+      "informationField": {
+        "fileGuid": null,
+        "attributeValues": [
+			{
+				"__object": "ФОД_ПолучитьДопРеквизит()",
+    			"attribute": "ФОД_ПолучитьНаименованиеДопРеквизита()",
+    			"value": "ФОД_ПолучитьЗначениеДопРеквизита()"
+			}
+		]
+      }
+    },
+   	"signor": {
+		    "__object": "ФОД_ПолучитьПодписантаДокумента()",
+		    "type": "ФОД_ПолучитьТипПодписанта()",
+		    "position": "ФОД_ПолучитьДолжностьПодписанта()",
+		    "companyName": "ФОД_ПолучитьИмяКомпанииПодписанта()",
+		    "ogrnIp": "ФОД_ПолучитьОГРНИП()",
+		    "inn": "ФОД_ПолучитьИННКомпанииПодписанта()",
+		    "additionalData": null,
+		    "surname": "ФОД_ПолучитьФамилиюПодписанта()",
+		    "name": "ФОД_ПолучитьИмяПодписанта()",
+		    "patronymic": "ФОД_ПолучитьОтчествоПодписанта()",
+		    "duty": "ФОД_ПолучитьОбластьПолномочий()",
+		    "dutyBasis": "Должностные обязанности",
+		    "companyDutyBasis": "Должностные обязанности",
+    		"status": 3
+	}
+  }
+}

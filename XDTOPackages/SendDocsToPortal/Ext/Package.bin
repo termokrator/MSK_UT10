@@ -1,0 +1,27 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://ws.moskvorechie.ru:80/SD">
+	<objectType name="Incom_getDocs">
+		<property name="Doc_ID" type="xs:string"/>
+		<property name="Doc_Date" type="xs:date" nillable="true"/>
+		<property name="Format" type="xs:string"/>
+		<property name="TypeDoc" type="xs:string"/>
+		<property name="Kontr_ID" type="xs:string"/>
+	</objectType>
+	<objectType name="RS_getDocs">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/SD" name="Row" type="d3p1:Out_getDocs" upperBound="-1"/>
+	</objectType>
+	<objectType name="Out_getDocs">
+		<property name="Status" type="xs:integer"/>
+		<property name="DocFile" type="xs:base64Binary"/>
+	</objectType>
+	<objectType name="Incom_getDocsRet">
+		<property name="Doc_ID" type="xs:string"/>
+	</objectType>
+	<objectType name="RS_getDocsRet">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/SD" name="Row" type="d3p1:Out_getDocsRet" upperBound="-1"/>
+	</objectType>
+	<objectType name="Out_getDocsRet">
+		<property name="Status" type="xs:integer"/>
+		<property name="LetterFile" type="xs:base64Binary" nillable="true"/>
+		<property name="DocFile" type="xs:base64Binary"/>
+	</objectType>
+</package>

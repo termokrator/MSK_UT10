@@ -1,0 +1,51 @@
+﻿<package xmlns="http://v8.1c.ru/8.1/xdto" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://ws.moskvorechie.ru:80/CALC">
+	<objectType name="Incom_PM_GET_BALANCE_FOR_PORTAL">
+		<property name="ID" type="xs:string"/>
+	</objectType>
+	<objectType name="Out_PM_GET_BALANCE_FOR_PORTAL">
+		<property name="Summa_RUB" type="xs:decimal"/>
+		<property name="Summa_EUR" type="xs:decimal"/>
+	</objectType>
+	<objectType name="RS_PM_GET_BALANCE_FOR_PORTAL">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/CALC" name="Row" type="d3p1:Out_PM_GET_BALANCE_FOR_PORTAL" upperBound="-1"/>
+	</objectType>
+	<objectType name="Incom_PM_CALCULATION_FOR_PORTAL">
+		<property name="KONTRAGENT_ID" type="xs:string"/>
+		<property name="SOTR_ID" type="xs:string"/>
+		<property name="USER_ID" type="xs:string"/>
+		<property name="BDATE" type="xs:date"/>
+		<property name="EDATE" type="xs:date"/>
+		<property name="IS_SORT_BY_DOC_DATE" type="xs:string"/>
+	</objectType>
+	<objectType name="Out_PM_CALCULATION_FOR_PORTAL">
+		<property name="DID" type="xs:string"/>
+		<property name="KONTRAGENT" type="xs:string"/>
+		<property name="DDATE1" type="xs:date"/>
+		<property name="DOC_TYPE" type="xs:string"/>
+		<property name="DCODE" type="xs:string"/>
+		<property name="DOC_STATE" type="xs:string"/>
+		<property name="FORMA_OPLATY" type="xs:string"/>
+		<property name="VALUTA" type="xs:string"/>
+		<property name="SUMMA_DOC" type="xs:decimal"/>
+		<property name="DOLG" type="xs:decimal"/>
+		<property name="PRIVAZ" type="xs:string"/>
+		<property name="FILIAL" type="xs:string"/>
+		<property name="RASHOD_EURO" type="xs:decimal"/>
+		<property name="PRIHOD_EURO" type="xs:decimal"/>
+		<property name="SALDO_EUR" type="xs:decimal"/>
+		<property name="RASHOD_RUB_NAL" type="xs:decimal"/>
+		<property name="PRIHOD_RUB_NAL" type="xs:decimal"/>
+		<property name="SALDO_RUB_NAL" type="xs:decimal"/>
+		<property name="SF" type="xs:string"/>
+		<property name="RASHOD_RUB" type="xs:decimal"/>
+		<property name="PRIHOD_RUB" type="xs:decimal"/>
+		<property name="SALDO_RUB" type="xs:decimal"/>
+		<property name="I" type="xs:integer"/>
+		<property name="DDATE2" type="xs:date"/>
+		<property name="IS_DEBIT" type="xs:integer"/>
+		<property name="IS_NAL" type="xs:integer"/>
+	</objectType>
+	<objectType name="RS_PM_CALCULATION_FOR_PORTAL">
+		<property xmlns:d3p1="http://ws.moskvorechie.ru:80/CALC" name="Row" type="d3p1:Out_PM_CALCULATION_FOR_PORTAL" upperBound="-1"/>
+	</objectType>
+</package>
