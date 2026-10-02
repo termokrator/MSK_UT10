@@ -168,6 +168,12 @@
 				<Event name="OnChange">КодМаркировкиСоЗнакамиПриИзменении</Event>
 			</Events>
 		</InputField>
+		<InputField name="МинимальнаяЕдиницаПотребления" id="57">
+			<DataPath>Объект.МинимальнаяЕдиницаПотребления</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="МинимальнаяЕдиницаПотребленияКонтекстноеМеню" id="58"/>
+			<ExtendedTooltip name="МинимальнаяЕдиницаПотребленияРасширеннаяПодсказка" id="59"/>
+		</InputField>
 		<Table name="ВложенныеКоды" id="28">
 			<Representation>List</Representation>
 			<AutoInsertNewRow>true</AutoInsertNewRow>
