@@ -1837,13 +1837,13 @@
 	
 КонецФункции
 
-Функция CreateTransportWaybillTitle3(UserGUID, Identifier, QuantityPlaces)
+Функция CreateTransportWaybillTitle3(UserGUID, Identifier, QuantityPlaces, CargoCondition)
 	
 	ВремяНачалаUTC = ТекущаяУниверсальнаяДатаВМиллисекундах();
 	ЗаписьЖурналаРегистрации("Web-сервис ARMStoreKeeper", УровеньЖурналаРегистрации.Информация,,, "Веб-сервис:Запуск. CreateTransportWaybillTitle3");
 	
 	Попытка
-		РезультатВыполнения = ARMStoreKeeper.СоздатьТитул3ТранспортнойНакладной(Identifier, QuantityPlaces, UserGUID);
+		РезультатВыполнения = ARMStoreKeeper.СоздатьТитул3ТранспортнойНакладной(Identifier, QuantityPlaces, CargoCondition, UserGUID);
 	Исключение
 		РезультатВыполнения = ПолучитьОписаниеОшибки(ОписаниеОшибки());
 	КонецПопытки;
